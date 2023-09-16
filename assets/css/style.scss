@@ -8,3 +8,9 @@ body {
 	font-size: 1.5em;
 	}
 
+/* Media query for phones */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust the font size for phones */
+    }
+}
