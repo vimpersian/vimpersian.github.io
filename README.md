@@ -37,8 +37,14 @@
 </div>
 <br>
 
-<div dir="rtl"><h1>  حرکت در فایل</h1></div>
-<div dir="rtl"><h2>   حرکت با حروف، کلمه یا توکن</h2></div>
+<ol>
+<li><a href="#moving">حرکت در فایل</a></li>
+<li><a href="#moving2">حرکت با حروف، کلمه یا توکن</a></li>
+<li><a href="#moving2">حرکت با خطوط</a></li>
+</ol>
+
+<div dir="rtl"><h1 id="moving">حرکت در فایل</h1></div>
+<div dir="rtl"><h2 id="moving2">حرکت با حروف، کلمه یا توکن</h2></div>
 
 <div dir="rtl">کلید‌های اساسی حرکت در ویم این‌ها هستند:</div>
 
@@ -72,7 +78,7 @@
 **`:h matchpairs`**
 <br>
 
-<div dir="rtl"><h1>  حرکت  با خطوط</h1></div>
+<div dir="rtl"><h1 id="move3">حرکت  با خطوط</h1></div>
 
 -   **`0 \ zero`**  -- حرکت به اول خط فعلی
 -   **`$ \ dollar sign`** -- حرکت به آخر خط فعلی
