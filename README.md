@@ -51,8 +51,8 @@
 <br>
 <hr>
 
-<div dir="rtl" style="list-style-type: persian; margin-right: 5px;">
-<ol>
+<div dir="rtl" style="margin-right: 5px;">
+<ol style="list-style-type: persian;">
 <li><a href="#moving">حرکت در فایل</a></li>
 <li><a href="#moving2">حرکت با حروف، کلمه یا توکن</a></li>
 <li><a href="#moving3">حرکت با خطوط</a></li>
