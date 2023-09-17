@@ -8,13 +8,13 @@ body {
 	font-size: 1.5em;
 	}
 
-/* Media query for phones */
 @media (max-width: 768px) {
     body {
-        font-size: 14px; /* Adjust the font size for phones */
+        font-size: 14px;
     }
 	iframe {
-		width: 260;
-		height: 115;
+		max-width: 100%; 
+		width: 100%;
+		height: 100%;
 	}
 }
