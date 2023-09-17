@@ -8,6 +8,10 @@ body {
 	font-size: 1.5em;
 	}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif; /* Specify the same font for headings */
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;
