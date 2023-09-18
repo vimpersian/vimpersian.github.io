@@ -9,12 +9,15 @@ body {
 	}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif; /* Specify the same font for headings */
+    font-family: 'Open Sans', sans-serif;
 }
 
 strong, small {
-    font-family: 'Open Sans', sans-serif; /* Specify the font for <strong> and <small> tags */
+    font-family: 'Open Sans', sans-serif;
 }
+ li {
+    text-decoration: none;
+  }
 
 @media (max-width: 768px) {
     body {
