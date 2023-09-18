@@ -72,8 +72,13 @@
 <li><a href="#larg">آرگومان های خط فرمان</a></li>
 <li><a href="#parsi-1">کارکردن با نوشتار پارسی در ویم</a></li>
 <li><a href="#parsi-2">نکاتی درمورد ترمینال</a></li>
+<li><a href="#parsi-3">فونت‌های مناسب برای هر دو نوشتار پارسی و انگلیسی </a></li>
 </ol>
 </div>
+
+<ul>
+<li><a href="#update">آخرین آپدیت</a></li>
+</ul>
 
 <hr>
 <div dir="rtl"><h1 id="moving">حرکت در فایل</h1></div>
@@ -587,7 +592,7 @@ let mapleader =" "
 10. Sakura 
 
 <div dir="rtl">
-   <h2> 
+   <h2 id="parsi-3"> 
    فونت‌های مناسب برای هر دو نوشتار پارسی و انگلیسی 
    </h2>
    فونت‌های زیر عملکرد‌ مناسبی در هردو نوشتار راست به چپ و چپ به راست دارند.
@@ -618,7 +623,7 @@ fc-match monospace
 <br>
 <br>
 <hr>
-<div align="center" dir="rtl" style="color:orange;">
+<div id="update" align="center" dir="rtl" style="color:orange;">
 آخرین آپدیت:
 
 ۲۷ شهریور ۱۴۰۱
