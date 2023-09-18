@@ -16,6 +16,10 @@ strong, small {
     font-family: 'Open Sans', sans-serif;
 }
 
+div {
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;
