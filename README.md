@@ -631,7 +631,7 @@ set conceallevel=2 concealcursor=nv
 ```
 
 <div dir="rtl">من اینجا از کاراکتر | برای نشان دادن نیم فاصله استفاده  می کنم.</div>
-
+<br>
 
 <div dir="rtl">
    <h1 id="vimrc"> 
