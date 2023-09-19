@@ -4,4 +4,6 @@
 - [ ] spell check
 - [ ] custom mappings 
 - [ ] NETRW
+- [ ] Compiling Vim
+- [ ] tcl (maybe)
 
