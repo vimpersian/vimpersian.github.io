@@ -1,6 +1,7 @@
 # Chapters to write
 
-- [ ] vim plugins - default and vimplug way
+- [x] vim plugins - default and vimplug way
+    - vimplug covered - pack/start briefly covered 
 - [ ] spell check
 - [ ] custom mappings 
 - [ ] NETRW
