@@ -1,6 +1,6 @@
 <div align="right">
 <a href="http://www.coffeete.ir/wolandark">
-       <img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
+<img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
 </a>
 </div>
 
@@ -23,64 +23,64 @@
 - operation (عملیات)
 - motion (جهت) 
 
-<div dir="rtl">
-تمام دستورات ویم می‌توانند با یک عدد پیش از آن‌ها، به تعداد آن عدد انجام شوند. همچنین تمام دستورات ویم نیز می‌توانند در جهت خاصی مانند ،چپ، راست، تا آخر خط، تا آخر کلمه، تا آخر پاراگراف ، تا اولین خط خالی و ... انجام شوند.
-<br><br>
-در ویم یا وی‌آی، ما می‌توانیم با تنها یک کلید ، در متن حرکت کنیم. این حرکت‌ها به کلمات، گروهی از حروف ، اعداد، تک حرف ، توکن‌ها یا خط ‌ها باشند.
-در منطق ویم، یک کلمه می‌تواند گروهی از حروف ، اعداد و  سمبل‌ها باشد. از طرفی دیگر یک توکن، هر آنچه که با فضای سفید، (اسپیس)  جدا شده باشد تلقی می‌شود.
-<br><br>
-<strong style="color:red">
-این راهنما باید بعد از انجام کامل vimtutor خوانده شود.
-</strong>
-<br>
-<small> در ترمینال عبارت <code>vimtutor</code> را وارد کنید و درس‌ها را انجام دهید.
-اگر با زبان انگلیسی آن راحت نیستید، این پلی‌لیست را در یوتوب ببینید.
-</small>
-</div>
-<br>
+    <div dir="rtl">
+    تمام دستورات ویم می‌توانند با یک عدد پیش از آن‌ها، به تعداد آن عدد انجام شوند. همچنین تمام دستورات ویم نیز می‌توانند در جهت خاصی مانند ،چپ، راست، تا آخر خط، تا آخر کلمه، تا آخر پاراگراف ، تا اولین خط خالی و ... انجام شوند.
+    <br><br>
+    در ویم یا وی‌آی، ما می‌توانیم با تنها یک کلید ، در متن حرکت کنیم. این حرکت‌ها به کلمات، گروهی از حروف ، اعداد، تک حرف ، توکن‌ها یا خط ‌ها باشند.
+    در منطق ویم، یک کلمه می‌تواند گروهی از حروف ، اعداد و  سمبل‌ها باشد. از طرفی دیگر یک توکن، هر آنچه که با فضای سفید، (اسپیس)  جدا شده باشد تلقی می‌شود.
+    <br><br>
+    <strong style="color:red">
+    این راهنما باید بعد از انجام کامل vimtutor خوانده شود.
+    </strong>
+    <br>
+    <small> در ترمینال عبارت <code>vimtutor</code> را وارد کنید و درس‌ها را انجام دهید.
+    اگر با زبان انگلیسی آن راحت نیستید، این پلی‌لیست را در یوتوب ببینید.
+    </small>
+    </div>
+    <br>
 
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1MQuSZzjvMA?si=hfl-ZmyHKMjRm7FE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-<br>
-<div dir="rtl">در این پلی‌لیست تمامی درس‌های <code>vimtutor</code>
-به‌علاوه‌ی درس‌هایی در باره نصب پلاگین و شخصی سازی ویم، قرار
-گرفته است.<br>  اگرچه بیشتر اطلاعات داخل <code>vimtutor</code> در این سایت پوشش داده
-می‌شود، فرض بر آن است که مخاطب <code>vimtutor</code> را گذرانده است. مرحله اول یادگیری
-ویم، همیشه و همه‌جا <code>vimtutor</code> است.</div>
-<br>
-<hr>
+    <div align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1MQuSZzjvMA?si=hfl-ZmyHKMjRm7FE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <br>
+    <div dir="rtl">در این پلی‌لیست تمامی درس‌های <code>vimtutor</code>
+    به‌علاوه‌ی درس‌هایی در باره نصب پلاگین و شخصی سازی ویم، قرار
+    گرفته است.<br>  اگرچه بیشتر اطلاعات داخل <code>vimtutor</code> در این سایت پوشش داده
+    می‌شود، فرض بر آن است که مخاطب <code>vimtutor</code> را گذرانده است. مرحله اول یادگیری
+    ویم، همیشه و همه‌جا <code>vimtutor</code> است.</div>
+    <br>
+    <hr>
 
-<div dir="rtl" style="margin-right: 5px;">
-<ol style="list-style-type: persian;">
-<li><a href="#moving">حرکت در فایل</a></li>
-<li><a href="#moving2">حرکت با حروف، کلمه یا توکن</a></li>
-<li><a href="#moving3">حرکت با خطوط</a></li>
-<li><a href="#moving4">حرکت  به وسیله صفحه</a></li>
-<li><a href="#ins">وارد کردن متن</a></li>
-<li><a href="#edt"> ویرایش متن</a></li>
-<li><a href="#xyp">کات کپی و جایگذاری</a></li>
-<li><a href="#vis">حالت ویژوال</a></li>
-<li><a href="#srch"> جستجو در متن</a></li>
-<li><a href="#wq"> ذخیره کردن و خروج از فایل</a></li>
-<li><a href="#multi">  کار کردن با بیش از یک فایل</a></li>
-<li><a href="#mark"> مارک‌ها و پرش‌ها</a></li>
-<li><a href="#macro">ماکرو</a></li>
-<li><a href="#colo"> فعال کردن تم‌ها در ویم</a></li>
-<li><a href="#s">دستورات جایگزینی متن </a></li>
-<li><a href="#sflags">فلگ های مرسوم برای دستورات جایگزینی</a></li>
-<li><a href="#larg">آرگومان های خط فرمان</a></li>
-<li><a href="#parsi-1">کارکردن با نوشتار پارسی در ویم</a></li>
-<li><a href="#parsi-2">نکاتی درمورد ترمینال</a></li>
-<li><a href="#parsi-3">فونت‌های مناسب برای هر دو نوشتار پارسی و انگلیسی </a></li>
-<li><a href="#zwnj">نیم فاصله</a></li>
-<li><a href="#vimrc">ذخیره‌سازی تنظیمات در فایل ویم‌آرسی</a></li>
-<li><a href="#vimplug">نصب پلاگین با استفاده از ویم‌پلاگ</a></li>
-</ol>
-</div>
-<ul>
-<li><a href="#update">آخرین آپدیت</a></li>
-</ul>
+    <div dir="rtl" style="margin-right: 5px;">
+    <ol style="list-style-type: persian;">
+    <li><a href="#moving">حرکت در فایل</a></li>
+    <li><a href="#moving2">حرکت با حروف، کلمه یا توکن</a></li>
+    <li><a href="#moving3">حرکت با خطوط</a></li>
+    <li><a href="#moving4">حرکت  به وسیله صفحه</a></li>
+    <li><a href="#ins">وارد کردن متن</a></li>
+    <li><a href="#edt"> ویرایش متن</a></li>
+    <li><a href="#xyp">کات کپی و جایگذاری</a></li>
+    <li><a href="#vis">حالت ویژوال</a></li>
+    <li><a href="#srch"> جستجو در متن</a></li>
+    <li><a href="#wq"> ذخیره کردن و خروج از فایل</a></li>
+    <li><a href="#multi">  کار کردن با بیش از یک فایل</a></li>
+    <li><a href="#mark"> مارک‌ها و پرش‌ها</a></li>
+    <li><a href="#macro">ماکرو</a></li>
+    <li><a href="#colo"> فعال کردن تم‌ها در ویم</a></li>
+    <li><a href="#s">دستورات جایگزینی متن </a></li>
+    <li><a href="#sflags">فلگ های مرسوم برای دستورات جایگزینی</a></li>
+    <li><a href="#larg">آرگومان های خط فرمان</a></li>
+    <li><a href="#parsi-1">کارکردن با نوشتار پارسی در ویم</a></li>
+    <li><a href="#parsi-2">نکاتی درمورد ترمینال</a></li>
+    <li><a href="#parsi-3">فونت‌های مناسب برای هر دو نوشتار پارسی و انگلیسی </a></li>
+    <li><a href="#zwnj">نیم فاصله</a></li>
+    <li><a href="#vimrc">ذخیره‌سازی تنظیمات در فایل ویم‌آرسی</a></li>
+    <li><a href="#vimplug">نصب پلاگین با استفاده از ویم‌پلاگ</a></li>
+    </ol>
+    </div>
+    <ul>
+    <li><a href="#update">آخرین آپدیت</a></li>
+    </ul>
 
 <hr>
 <div dir="rtl"><h1 id="moving">حرکت در فایل</h1></div>
@@ -830,8 +830,141 @@ Plug 'address in single quotes'
  | :PlugUpdate | آپدیت پلاگین‌ها |
  | :PlugUpgrade | آپگرید ویم‌پلاگ |
  | :PlugClean | پاک کردن پلاگین‌ها |
+<br>
+<div dir="rtl"><h1> چند پلاگین مفید برای ویم </h1>
+لیستی از پلاگین‌های مفید و کارآمد در زیر آورده شده است. بر اساس نیاز خود و با در نظرگیری کارکرد و تطابق پلاگین‌ها با همدیگر  از بین آن‌ها انتخاب کنید. 
+لیست کامل‌تری از پلاگین‌های ویم در سایت 
+<a href="https://vimawesome.com/">vimawesome</a> 
+قرار دارد.
+<br>
+<br>
+</div>
+<div>
+    <ul>
+        <li>
+            <a href="https://github.com/tpope/vim-surround">vim-surround</a>
+            <p dir="rtl">پلاگینی برای محاصره کردن توکن ها با  الگو های دیگر</p>
+            <code>Plug 'tpope/vim-surround'</code>
+        </li>
+        <li>
+            <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a>
+            <p dir="rtl">اکستنشن Nodejs برای ویم - لود کردن اکستنشن مانند وی اس کد </p>
+            <code> curl -sL install-node.vercel.app/lts | bash
+            <br>
+            Plug 'neoclide/coc.nvim', {'branch': 'release'}</code>
+        </li>
+        <li>
+            <a href="https://github.com/ap/vim-css-color">vim-css-color</a>
+            <br>
+            <p dir="rtl">هایلات کردن رنگ‌های CSS در ویم</p>
+            <code>Plug 'ap/vim-css-color'</code>
+        </li>
+        <li>
+            <a href="https://github.com/itchyny/lightline.vim">lightline.vim</a>
+            <br>
+            <p dir="rtl">استاتوس لاین زیبا و کارآمد</p>
+            <code>Plug 'itchyny/lightline.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/junegunn/fzf.vim">fzf.vim</a>
+            <br>
+            <p dir="rtl">فازی فایندر </p>
+            <code>Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }<br>
+Plug 'junegunn/fzf.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/tpope/vim-repeat">vim-repeat</a>
+            <br>
+            <p dir="rtl">تکرار همه‌چیز به آسانی </p>
+            <code>Plug 'tpope/vim-repeat'</code>
+        </li>
+        <li>
+            <a href="https://vimawesome.com/plugin/tagbar">tagbar</a>
+            <br>
+            <p dir="rtl">پلاگین مرور کردن تگ‌ها</p>
+            <code>Plug 'majutsushi/tagbar'</code>
+        </li>
+        <li>
+            <a href="https://github.com/dense-analysis/ale">ale</a>
+            <br>
+            <p dir="rtl">پلاگین LSP برای ویم</p>
+            <code>Plug 'w0rp/ale'</code>
+        </li>
+        <li>
+            <a href="https://github.com/godlygeek/tabular">tabular</a>
+            <br>
+            <p dir="rtl">منظم‌سازی متن بر اساس الگو یا کاراکتر، مناسب جدول و غیره ...</p>
+            <code>Plug 'godlygeek/tabular'</code>
+        </li>
+        <li>
+            <a href="https://github.com/sirver/ultisnips">ultisnips</a>
+            <br>
+            <p dir="rtl">موتور مدیریت اسنیپت‌ها برای ویم</p>
+            <code>Plug 'sirver/ultisnips'</code>
+        </li>
+        <li>
+            <a href="https://github.com/honza/vim-snippets">vim-snippets</a>
+            <br>
+            <p dir="rtl">اسنیپت‌های ه هونزا برای استفاده با ultisnips</p>
+            <code>Plug 'honza/vim-snippets'</code>
+        </li>
+        <li>
+            <a href="https://github.com/rstacruz/sparkup">sparkup</a>
+            <br>
+            <p dir="rtl">خلاصه‌نویسی HTML مانند Emmet</p>
+            <code>Plug 'rstacruz/sparkup'</code>
+        </li>
+        <li>
+            <a href="https://github.com/chriskempson/base16-vim">base16-vim</a>
+            <br>
+            <p dir="rtl">صدها تم رنگی باکیفیت بر اساس پالت بیس۱۶</p>
+            <code>Plug 'chriskempson/base16-vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlp.vim</a>
+            <br>
+            <p dir="rtl">یک فازی فایندر دیگر برای ویم</p>
+            <code>Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'</code>
+        </li>
+        <li>
+            <a href="https://github.com/rking/ag.vim">ag.vim</a>
+            <br>
+            <p dir="rtl">ابزار فوق‌العاده‌ی ag برای ویم </p>
+            <code>Plug 'rking/ag.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/sheerun/vim-polyglot">پکیج زبان برای ویم</a>
+            <br>
+            <p dir="rtl"></p>
+            <code>Plug 'sheerun/vim-polyglot'</code>
+        </li>
+        <li>
+            <a href="https://github.com/tpope/vim-eunuch">vim-eunuch</a>
+            <br>
+            <p dir="rtl">دستورات پوسته با راحتی بیشتر از داخل ویم</p>
+            <code>Plug 'tpope/vim-eunuch'</code>
+        </li>
+        <li>
+            <a href="https://github.com/mg979/vim-visual-multi">vim-visual-multi</a>
+            <br>
+            <p dir="rtl">چندین نشانگر برای ویم مشابه سابلایم</p>
+            <code>Plug 'mg979/vim-visual-multi', {'branch': 'master'}</code>
+        </li>
+        <li>
+            <a href="https://github.com/mhinz/vim-startify">vim-startify</a>
+            <br>
+            <p dir="rtl">داشبرد شروع کار برای ویم</p>
+            <code>Plug 'mhinz/vim-startify'</code>
+        </li>
+        <li>
+            <a href="https://github.com/junegunn/goyo.vim">goyo.vim</a>
+            <br>
+            <p dir="rtl">وسط‌چین کردن متن در ویم و نگارش بدون حواس‌پرتی</p>
+            <code>Plug 'junegunn/goyo.vim'</code>
+        </li>
+    </ul>
 
-
+</div>
 
 <br>
 <br>
@@ -839,9 +972,9 @@ Plug 'address in single quotes'
 <div id="update" align="center" dir="rtl" style="color:orange;">
 آخرین آپدیت:
 
-۳۱ شهریور ۱۴۰۱
-
-Jom Sha 31 09:40:32 +0330 1402
+۱ مهر ۱۴۰۱
+<br>
+Sha Meh 01 23:19:30 +0330 1402
 
 </div>
 <hr>
