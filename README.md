@@ -783,7 +783,7 @@ call plug#begin()
 Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'https://github.com/wolandark/vim-live-server.git', { 'do': 'npm install browser-sync' }
+Plug 'https://github.com/wolandark/vim-live-server.git', { 'do': 'sudo npm install -g browser-sync' }
 
 call plug#end()
 ```
