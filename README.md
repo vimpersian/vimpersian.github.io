@@ -230,7 +230,7 @@ character mode, line mode, and block mode
 -   **`d`** -- کات
 -   **`p`** -- جایگذازی
     <br>
-    <div dir="rtl"><h1 id="srch"> جستجو در متن</h1></div>
+<div dir="rtl"><h1 id="srch"> جستجو در متن</h1></div>
 
 
 -   **`* \ asterisk`** -- رفتن به وقوع بعدی از کلمه‌ی زیر نشانگر
@@ -242,7 +242,7 @@ character mode, line mode, and block mode
 
     <br>
 
-    <div dir="rtl"><h1 id="wq"> ذخیره کردن و خروج از فایل</h1></div>
+<div dir="rtl"><h1 id="wq"> ذخیره کردن و خروج از فایل</h1></div>
 
 -   **`:w`** -- ذخیره کردن
 -   **`:wq`** / **`:x`** / **`ZZ`** -- ذخیر کردن و خروج از ویم
@@ -253,7 +253,8 @@ character mode, line mode, and block mode
 -   **`:w !sudo tee %`** -- ذخیره کردن فایل به‌وسیله‌ی سودو و تی، مناسب وقتی که فایلی را بدون دسترسی سودو باز کرده‌ایم [tee](https://wiki.archlinux.org/title/Tee)
     <br>
 
-    <div dir="rtl"><h1 id="multi">  کار کردن با بیش از یک فایل</h1></div>
+
+<div dir="rtl"><h1 id="multi">  کار کردن با بیش از یک فایل</h1></div>
 
 -   **`:e file_name `** -- باز کردن فایل در یک بافر جدید
 -   **`:bn `** -- رقتن به بافر بعدی
@@ -263,7 +264,7 @@ character mode, line mode, and block mode
 -   **`:b file_name`** -- رفتن به بافر با نام مشخص
 -   **`:ls`** -- لیست کردن تمام بافر باز ( شناسه‌ی عددی هر بافر کنار نام آن ظاهر خواهد شد)
 
-    <br>
+<br>
 
 -   **`:sp file_name `** -- باز کردن یک فایل در یک اسپلیت افقی
 -   **`:vs file_name `** --باز کردن یک فایل در یک اسپلیت عمودی
@@ -634,7 +635,10 @@ call matchadd('Conceal', '\%u200c', 10, -1, {'conceal':'|'})
 set conceallevel=2 concealcursor=nv
 ```
 
-<div dir="rtl">من اینجا از کاراکتر | برای نشان دادن نیم فاصله استفاده  می کنم.</div>
+<div dir="rtl">من اینجا از کاراکتر | برای نشان دادن نیم فاصله استفاده  می کنم.
+برای وارد کردن نیم‌فاصله با استفاده از کیبورد فارسی داخلی ویم از کلید‌های شیفت-بی Shift-B  استفاده می‌کنیم.
+
+</div>
 <br>
 
 <div dir="rtl">
