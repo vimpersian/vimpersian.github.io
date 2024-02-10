@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>فلگ های مرسوم برای حایگزینی متن - Vim Persian</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-intro.html"><strong aria-hidden="true">1.</strong> درآمد</a></li><li class="chapter-item expanded "><a href="2-moving-with-word-token.html"><strong aria-hidden="true">2.</strong> حرکت در فایل</a></li><li class="chapter-item expanded "><a href="3-moving-with-lines.html"><strong aria-hidden="true">3.</strong> حرکت با خطوط</a></li><li class="chapter-item expanded "><a href="4-moving-with-screens.html"><strong aria-hidden="true">4.</strong> حرکت به وسیله صفحه</a></li><li class="chapter-item expanded "><a href="5-input.html"><strong aria-hidden="true">5.</strong> وارد کردن متن</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6-editing.html"><strong aria-hidden="true">5.1.</strong> ویرایش متن</a></li><li class="chapter-item expanded "><a href="7-cut-copy-put.html"><strong aria-hidden="true">5.2.</strong> کات کپی و جایگذاری</a></li></ol></li><li class="chapter-item expanded "><a href="9-visual-mode.html"><strong aria-hidden="true">6.</strong>  حالت ویژوال</a></li><li class="chapter-item expanded "><a href="8-search.html"><strong aria-hidden="true">7.</strong> جستجو در متن</a></li><li class="chapter-item expanded "><a href="10-saving-exiting.html"><strong aria-hidden="true">8.</strong> ذخیره کردن و خروج از فایل</a></li><li class="chapter-item expanded "><a href="11-multitasking.html"><strong aria-hidden="true">9.</strong> کار کردن با بیش از یک فایل</a></li><li class="chapter-item expanded "><a href="12-marks-jumps.html"><strong aria-hidden="true">10.</strong> مارک ها و پرش ها</a></li><li class="chapter-item expanded "><a href="13-macros.html"><strong aria-hidden="true">11.</strong> ماکرو</a></li><li class="chapter-item expanded "><a href="14-colorschemes.html"><strong aria-hidden="true">12.</strong> فعال کردن تم ها در ویم</a></li><li class="chapter-item expanded "><a href="15-substitiute.html"><strong aria-hidden="true">13.</strong> دستورات جایگزینی متن</a></li><li class="chapter-item expanded "><a href="16-Commandline-Arguments.html" class="active"><strong aria-hidden="true">14.</strong> فلگ های مرسوم برای حایگزینی متن</a></li><li class="chapter-item expanded "><a href="17-persian.html"><strong aria-hidden="true">15.</strong> کارکردن با نوشتار پارسی در ویم</a></li><li class="chapter-item expanded "><a href="18-vimrc.html"><strong aria-hidden="true">16.</strong> ذخیره سازی تنظیمات در فایل ویم آرسی</a></li><li class="chapter-item expanded "><a href="19-vimplug.html"><strong aria-hidden="true">17.</strong> نصب پلاگین ها با استفاده از ویم پلاگ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="20-vimplugins.html"><strong aria-hidden="true">17.1.</strong> چند پلاگین مفید برای ویم</a></li></ol></li><li class="chapter-item expanded "><a href="footer.html"><strong aria-hidden="true">18.</strong> پانویس</a></li><li class="chapter-item expanded "><a href="todo.html"><strong aria-hidden="true">19.</strong> todo</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Vim Persian</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div dir="rtl"><h1 id="larg"><a class="header" href="#larg">آرگومان های خط فرمان</a></h1></div>
+<div dir="rtl">آرگومان های خط فرمان ویم، آپشن هایی هستند که برای تغییر عمل کرد ویم در هنگام باز کردن آن از ترمینال، می توانید مقابل نام دستور ویم قرار دهید. در جدول زیر تعداد زیادی از این آرگومان ها برای شما با توضیحات فارسی قرار داده شده است.</div>
+<br>
+<div dir="rtl">پر کاربردترین این آرگومان  ها از نظر نگارنده در جدول اول و باقی آن ها در جدول دوم آمده اند.</div>
+<hr>
+<div dir="rtl"><h4 id="جدول-اول"><a class="header" href="#جدول-اول">جدول اول</a></h4></div>
+<div class="table-wrapper"><table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>-o</code></td><td>باز کردن تعدادی فایل در اسپلیت های افقی</td></tr>
+<tr><td><code>-O</code></td><td>باز کردن تعدادی فایل در اسپلیت های افقی عمودی</td></tr>
+<tr><td><code>-p</code></td><td>باز کردن تعدادی فایل در تب های مجزا درون ویم</td></tr>
+<tr><td><code>+/{pat}</code></td><td>تعیین جایگاه نشانگر براساس اولین وقوع رجکس</td></tr>
+<tr><td><code>-u {vimrc}</code></td><td>خواندن فایل پیکره بندی غیر از فایل پیش فرض</td></tr>
+<tr><td><code>--clean</code></td><td>باز کردن ویم بدون تنظیمات شخصی - بدون ویم آرسی</td></tr>
+<tr><td><code>--version</code></td><td>چاپ اطلاعات مربوط به ورژن و ویژگی ها</td></tr>
+</tbody></table>
+</div><hr>
+<div dir="rtl"><h4 id="جدول-دوم"><a class="header" href="#جدول-دوم">جدول دوم</a></h4></div>
+<div class="table-wrapper"><table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>vim</code></td><td>باز کردن ویم و یک بافر خالی در حالت نرمال</td></tr>
+<tr><td><code>vim filename</code></td><td>باز کردن ویم با یک فایل مشخص</td></tr>
+<tr><td><code>vim -</code></td><td>stdin خواندن متن از ورودی استاندارد</td></tr>
+<tr><td><code>-n</code> or <code>--normal</code></td><td>باز کردن ویم در حالت نرمال، پیش‌فرض</td></tr>
+<tr><td><code>-i</code> or <code>--insert</code></td><td>باز کردن ویم در مود اینسرت</td></tr>
+<tr><td><code>-R</code> or <code>--readonly</code></td><td>باز کردن فایل در حالت غیرقابل ویرایش</td></tr>
+<tr><td><code>-N</code> or <code>--noplugin</code></td><td>باز کردن ویم بدون لود کردن هیچ پلاگینی</td></tr>
+<tr><td><code>+[num]</code></td><td>تعیین جایگاه نشانگر براساس شماره خط</td></tr>
+<tr><td><code>+{command}</code> or <code>-c {command}</code></td><td>اجرای یک دستور پس از بازکردن فایل</td></tr>
+<tr><td><code>-S {file}</code></td><td>سورس کردن یک فایل ویم اسکریپت</td></tr>
+<tr><td><code>-g</code> or <code>--gui</code></td><td>باز کردن جی ویم یا همان ویم در پنجره گرافیکی</td></tr>
+<tr><td><code>-A</code></td><td>باز کردن ویم در حالت عربی، راست به چپ آینه شده، درصورتی که با گزینه مربوط کامپایل شده باشد</td></tr>
+<tr><td><code>-b</code></td><td>حالت ویرایش فایل‌های باینری</td></tr>
+<tr><td><code>-C</code></td><td>vi حالت هماهنگی با ادیتور</td></tr>
+<tr><td><code>-d</code></td><td>diff باز کردن ویم در حالت دیف , برای مقایسه فایل‌ها</td></tr>
+<tr><td><code>-E</code></td><td>باز کردن ویم در مود ارتقا یافته ی اکس</td></tr>
+<tr><td><code>-F</code></td><td>باز کردن ویم با تنظیمات فارسی، این گزینه دیگر وجود ندارد</td></tr>
+<tr><td><code>-h</code></td><td>نمایش پیام کمکی</td></tr>
+<tr><td><code>-m</code></td><td>غیر فعال کردن امکان ایجاد تغییر</td></tr>
+<tr><td><code>-N</code></td><td>vi  خاموش کردن تطابق با</td></tr>
+<tr><td><code>-R</code></td><td>read only حالت</td></tr>
+<tr><td><code>-r</code></td><td>لیست کردن فایل های سواپ ویم جهت ریکاوری</td></tr>
+<tr><td><code>-x</code></td><td>فعال سازی رمزگذاری فایل</td></tr>
+<tr><td><code>-y</code></td><td>باز کردن ویم در حالت ایزی-ویم / در این حالت ویم نت پد ویندوز را شبیه سازی می کند</td></tr>
+<tr><td><code>-Z</code></td><td>باز کردن ویم در حالت محدود، جلوگیری از اجرای دستورات پوسته و غیره</td></tr>
+<tr><td><code>--</code></td><td>اعلام پایان آرگومان های ویم، پس از این تمام آرگومان ها به عنوان نام فایل خوانده می شوند</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="15-substitiute.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="17-persian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="15-substitiute.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="17-persian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
