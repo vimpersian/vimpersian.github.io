@@ -1006,9 +1006,41 @@ Sha Meh 01 23:31:46 +0330 1402
 # Contact me
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/wolandarkside)
 [![Protonmail](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:contact-woland@proton.me)
-
 <br>
 <br>
 <hr>
-<script data-goatcounter="https://vimpersian.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+# Chapters to write
+
+- [x] vim plugins - default and vimplug way
+    - vimplug covered - pack/start briefly covered 
+- [x] list of useful plugins
+- [ ] Insert mode keybindings
+- [ ] custom mappings 
+- [ ] spell check
+- [ ] NETRW
+- [ ] Compiling Vim
+<br>
+<br>
+<hr>
+
+<div dir="rtl">
+<h5>راهنمای کمک به این پروژه</h5>
+
+دوستداران ویم که قصد دارند در این پروژه سهیم باشند، قبل از ثبت هر نوع درخواست موارد زیر را بررسی نمایند
+
+یک : فرمت مطالب می‌بایست مارکداون یا ویکی باشد
+
+دو: نسخه ویم و تنظیمات آرسی یا پلاگین ها قید شوند
+
+سه: نکاتی که وابسته به پلاگین هستند تحت عنوان همان پلاگین ثبت شوند
+
+چهار: نکات مربوط به زبان برنامه نویسی خاصی، تحت نام همان زبان ثبت شوند
+
+پنج: هیچ ضمانتی از طرف مالک این مخزن من‌باب ثبت و مرج شدن مطالب شما وجود ندارد
+
+شش: مطالب تکراری نادیده گرقته خواهند شد
+
+هفت: اگر قصد دارید مطلبی را به فصلی اضافه کنید، در فایل محتص آن فصل در پوشه ی فایل های مارکدان مخزن این کار را انجام دهید.
+
+</div>
