@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vim Persian</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-intro.html"><strong aria-hidden="true">1.</strong> درآمد</a></li><li class="chapter-item expanded "><a href="2-moving-with-word-token.html"><strong aria-hidden="true">2.</strong> حرکت در فایل</a></li><li class="chapter-item expanded "><a href="3-moving-with-lines.html"><strong aria-hidden="true">3.</strong> حرکت با خطوط</a></li><li class="chapter-item expanded "><a href="4-moving-with-screens.html"><strong aria-hidden="true">4.</strong> حرکت به وسیله صفحه</a></li><li class="chapter-item expanded "><a href="5-input.html"><strong aria-hidden="true">5.</strong> وارد کردن متن</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6-editing.html"><strong aria-hidden="true">5.1.</strong> ویرایش متن</a></li><li class="chapter-item expanded "><a href="7-cut-copy-put.html"><strong aria-hidden="true">5.2.</strong> کات کپی و جایگذاری</a></li></ol></li><li class="chapter-item expanded "><a href="9-visual-mode.html"><strong aria-hidden="true">6.</strong>  حالت ویژوال</a></li><li class="chapter-item expanded "><a href="8-search.html"><strong aria-hidden="true">7.</strong> جستجو در متن</a></li><li class="chapter-item expanded "><a href="10-saving-exiting.html"><strong aria-hidden="true">8.</strong> ذخیره کردن و خروج از فایل</a></li><li class="chapter-item expanded "><a href="11-multitasking.html"><strong aria-hidden="true">9.</strong> کار کردن با بیش از یک فایل</a></li><li class="chapter-item expanded "><a href="12-marks-jumps.html"><strong aria-hidden="true">10.</strong> مارک ها و پرش ها</a></li><li class="chapter-item expanded "><a href="13-macros.html"><strong aria-hidden="true">11.</strong> ماکرو</a></li><li class="chapter-item expanded "><a href="14-colorschemes.html"><strong aria-hidden="true">12.</strong> فعال کردن تم ها در ویم</a></li><li class="chapter-item expanded "><a href="15-substitiute.html"><strong aria-hidden="true">13.</strong> دستورات جایگزینی متن</a></li><li class="chapter-item expanded "><a href="16-Commandline-Arguments.html"><strong aria-hidden="true">14.</strong> فلگ های مرسوم برای حایگزینی متن</a></li><li class="chapter-item expanded "><a href="17-persian.html"><strong aria-hidden="true">15.</strong> کارکردن با نوشتار پارسی در ویم</a></li><li class="chapter-item expanded "><a href="18-vimrc.html"><strong aria-hidden="true">16.</strong> ذخیره سازی تنظیمات در فایل ویم آرسی</a></li><li class="chapter-item expanded "><a href="19-vimplug.html"><strong aria-hidden="true">17.</strong> نصب پلاگین ها با استفاده از ویم پلاگ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="20-vimplugins.html"><strong aria-hidden="true">17.1.</strong> چند پلاگین مفید برای ویم</a></li></ol></li><li class="chapter-item expanded "><a href="footer.html"><strong aria-hidden="true">18.</strong> پانویس</a></li><li class="chapter-item expanded "><a href="todo.html"><strong aria-hidden="true">19.</strong> todo</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Vim Persian</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div align="right">
+<a href="http://www.coffeete.ir/wolandark">
+       <img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
+</a>
+</div>
+<div align="center"><h1 id="hello-vim-world"><a class="header" href="#hello-vim-world"> Hello Vim World!</a></h1></div>
+<div dir="rtl">
+ویم‌، یک ادیتور مودال است. به این معنی که در ویم، ما مود‌های مختلف جهت انجام کارهای مختلف داریم. مد عادی ویم، یا همان نرمال مود، حالتی است که در آن ما درون فایل حرکت می‌کنیم، متن را جستجو می‌کنیم یا ویرایش‌های جزئی انجام می‌دهیم. 
+<br><br>
+<p>برای وارد کردن متن از مود وردی یا اینسرت مود استفاده می‌کنیم و برای انتخاب و ویرایش‌های بزرگ‌تر از مود ویژوآل، و برای اجرای دستورات خط فرمان ویم یا خط فرمان پوسته، از مود دستوری یا کامند مود استفاده می‌کنیم.</p>
+<p>دانستن اینکه ویم فراتر از یک ادیتور است و درواقع یک زبان برای ویرایش متن و کد است در ابتدای کار حیاتی است.
+در ویم هر کلید کیبورد در مود نرمال به یک کنش یا اکشن اختصاص دارد. مدل ویرایش در ویم این صورت است که ما مدام در بین مودهای مختلف در حال حرکت هستیم و این سرعتی باور نکردنی در پیمایش متن و ویرایش آن به ما می‌دهد.
+<br><br></p>
+<p>ویم دارای گرامر بخصوصی است که آن‌را می‌توان به COM خلاصه کرد.</p>
+</div>
+<ul>
+<li>count (شمارش)</li>
+<li>operation (عملیات)</li>
+<li>motion (جهت)</li>
+</ul>
+<div dir="rtl">
+تمام دستورات ویم می‌توانند با یک عدد پیش از آن‌ها، به تعداد آن عدد انجام شوند. همچنین تمام دستورات ویم نیز می‌توانند در جهت خاصی مانند ،چپ، راست، تا آخر خط، تا آخر کلمه، تا آخر پاراگراف ، تا اولین خط خالی و ... انجام شوند.
+<br><br>
+در ویم یا وی‌آی، ما می‌توانیم با تنها یک کلید ، در متن حرکت کنیم. این حرکت‌ها به کلمات، گروهی از حروف ، اعداد، تک حرف ، توکن‌ها یا خط ‌ها باشند.
+در منطق ویم، یک کلمه می‌تواند گروهی از حروف ، اعداد و  سمبل‌ها باشد. از طرفی دیگر یک توکن، هر آنچه که با فضای سفید، (اسپیس)  جدا شده باشد تلقی می‌شود.
+<br><br>
+<strong style="color:red">
+این راهنما باید بعد از انجام کامل vimtutor خوانده شود.
+</strong>
+<br>
+<small> در ترمینال عبارت <code>vimtutor</code> را وارد کنید و درس‌ها را انجام دهید.
+اگر با زبان انگلیسی آن راحت نیستید، این پلی‌لیست را در یوتوب ببینید.
+</small>
+</div>
+<br>
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1MQuSZzjvMA?si=hfl-ZmyHKMjRm7FE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br>
+<div dir="rtl">در این پلی‌لیست تمامی درس‌های <code>vimtutor</code>
+به‌علاوه‌ی درس‌هایی در باره نصب پلاگین و شخصی سازی ویم، قرار
+گرفته است.<br>  اگرچه بیشتر اطلاعات داخل <code>vimtutor</code> در این سایت پوشش داده
+می‌شود، فرض بر آن است که مخاطب <code>vimtutor</code> را گذرانده است. مرحله اول یادگیری
+ویم، همیشه و همه‌جا <code>vimtutor</code> است.</div>
+<br>
+<hr>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="moving"><a class="header" href="#moving">حرکت در فایل</a></h1></div>
+<div dir="rtl"><h2 id="moving2"><a class="header" href="#moving2">حرکت با حروف، کلمه یا توکن</a></h2></div>
+<div dir="rtl">کلید‌های اساسی حرکت در ویم این‌ها هستند:</div>
+<ul>
+<li><strong><code>h</code></strong> -- حرکت نشانگر به چپ</li>
+<li><strong><code>j</code></strong> -- حرکت نشانگر به پایین</li>
+<li><strong><code>k</code></strong> -- حرکت نشانگر به بالا</li>
+<li><strong><code>l</code></strong> -- حرکت نشانگر به راست
+<br></li>
+</ul>
+<div dir="rtl">
+این کلید‌ها را می‌توان با یک شمارش همراه کرد تا به توان همان عدد انجام شوند
+</div>
+<ul>
+<li>
+<p><strong><code>5j</code></strong>  پنج خط به پایین می‌رود
+<br></p>
+</li>
+<li>
+<p><strong><code>b</code></strong> -- حرکت به اول یک کلمه</p>
+</li>
+<li>
+<p><strong><code>B</code></strong> -- حرکت به اول یک توکن</p>
+</li>
+<li>
+<p><strong><code>w</code></strong> -- حرکت به اول کلمه‌ی بعد</p>
+</li>
+<li>
+<p><strong><code>W</code></strong> -- حرکت به اول توکن بعد</p>
+</li>
+<li>
+<p><strong><code>e</code></strong> -- حرکت به آخر کلمه</p>
+</li>
+<li>
+<p><strong><code>E</code></strong> -- حرکت به آخر توکن</p>
+</li>
+</ul>
+<br>
+<div dir="rtl">
+<p>برای  پرش به  پرانتز بسته،  گیومه بسته  و غیره از  <strong><code>%</code></strong> استفاده کنید</p>
+</div>
+<p><strong><code>:h matchpairs</code></strong>
+<br></p>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="moving3"><a class="header" href="#moving3">حرکت  با خطوط</a></h1></div>
+<ul>
+<li><strong><code>0 \ zero</code></strong>  -- حرکت به اول خط فعلی</li>
+<li><strong><code>$ \ dollar sign</code></strong> -- حرکت به آخر خط فعلی</li>
+<li><strong><code>^ \ caret sign</code></strong> -- حرکت به اولین  کاراکتر موجود در خط</li>
+<li><strong><code>#G</code></strong> / <strong><code>#gg</code></strong> / <strong><code>:#</code></strong> حرکت به شماره خط مشخص، (شماره خط جایگزین هشتگ شود)</li>
+</ul>
+<br>
+<div dir="rtl">برای استفاده از این قابلیت، شماره خطوط را فعال کنید.</div>
+<pre><code>:set number
+</code></pre>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="moving4"><a class="header" href="#moving4">  حرکت  به وسیله صفحه</a></h1></div>
+دستورهای زیر برای اسکرول کردن سریع در فایل کاربرد دارند.
+<ul>
+<li><strong><code>Ctrl + b</code></strong> -- یک صفحه کامل به عقب رفتن</li>
+<li><strong><code>Ctrl + f</code></strong> -- یک صفحه کامل به جلو رفتن</li>
+<li><strong><code>Ctrl + d</code></strong> -- نصف صفحه جلو‌ رفتن</li>
+<li><strong><code>Ctrl + u</code></strong> -- نصف صفحه عقب رفتن</li>
+<li><strong><code>Ctrl + e</code></strong> -- صفحه را بدون حرکت دادن نشانگر یک خط پایین‌تر بردن</li>
+<li><strong><code>Ctrl + y</code></strong> --  صفحه را بدون حرکت دادن نشانگر یک خط بالاتر بردن</li>
+<li><strong><code>Ctrl + o</code></strong> -- به عقب رفتن در تاریخچه‌ی پرش ها. برای حرکت بین فایل‌ها و بافرها هم کاربرد دار</li>
+<li><strong><code>Ctrl + i</code></strong> -- برعکس دستور بالا</li>
+</ul>
+<br>
+<ul>
+<li><strong><code>H</code></strong> -- حرکت به بالای صفحه</li>
+<li><strong><code>M</code></strong> -- حرکت به وسط صفحه</li>
+<li><strong><code>L</code></strong> -- حرکت به پایین صفحه</li>
+</ul>
+<br> 
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="ins"><a class="header" href="#ins">  وارد کردن متن</a></h1></div>
+<ul>
+<li><strong><code>i</code></strong> -- وارد شدن به حالت ورود متن</li>
+<li><strong><code>I</code></strong> -- وارد کردن متن در اول خط</li>
+<li><strong><code>a</code></strong> -- سوییچ کردن به حالت ورود متن بعد از نشانگر</li>
+<li><strong><code>A</code></strong> -- وارد کردن متن در آخر خط</li>
+<li><strong><code>o</code></strong> -- باز کردن یک خط جدید زیر خط فعلی</li>
+<li><strong><code>O</code></strong> -- باز کردن خط جدید بالای خط فعلی</li>
+<li><strong><code>ea</code></strong> -- وارد کردن متن در آخر کلمه</li>
+<li><strong><code>Esc</code></strong> -- خارج شدن از حالت ورود متن و برگشنن به حالت نرمال
+<br></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="edt"><a class="header" href="#edt">  ویرایش متن</a></h1></div>
+<ul>
+<li><strong><code>r</code></strong> -- جایگزین کردن یک کاراکتر و بازگشت به حالت نرمال</li>
+<li><strong><code>cc</code></strong> -- جایگزین کردن کل خط (خط را پاک می‌کند و به خالت ورود متن می‌رود)</li>
+<li><strong><code>C</code></strong> / <strong><code>c$</code></strong> -- جایگزین کردن متن از مکان نشانگر تا آخر خط</li>
+<li><strong><code>cw</code></strong> -- جایگزین کردن تا آخر کلمه</li>
+<li><strong><code>s</code></strong> -- جایگزین کردن یک کاراکتر و رفتن به حالت ورود متن</li>
+<li><strong><code>J</code></strong> -- ادغام خط فعلی و خط زیر آن با یک اسپیس فاصله</li>
+<li><strong><code>gJ</code></strong> -- ادغام خط فعلی با خط زیر آن بدون اسپیس</li>
+<li><strong><code>u</code></strong> -- undo</li>
+<li><strong><code>Ctrl</code></strong> + <strong><code>r</code></strong> -- redo</li>
+<li><strong><code>.</code></strong> -- تکرار آخرین دستور
+<br></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="xyp"><a class="header" href="#xyp">   کات کپی و جایگذاری</a></h1></div>
+<ul>
+<li><strong><code>yy</code></strong> -- کپی کردن کامل خط فعلی</li>
+<li><strong><code>#yy</code></strong> -- کپی کردن تعداد مشخصی از خطوط</li>
+<li><strong><code>dd</code></strong> -- کات کردن کل خط</li>
+<li><strong><code>#dd</code></strong> -- کات کردن تعداد مشخصی از خطوط</li>
+<li><strong><code>p</code></strong> -- جایگذاری بعد از نشانگر</li>
+<li><strong><code>P</code></strong> -- جایگذاری قبل از نشانگر
+<br></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="vis"><a class="header" href="#vis">  حالت ویژوال</a></h1>
+<p>به غیر از حالت ورود متن (insert mode) و حالت نرمال (normal mode) و حالت دستوری (command mode)، حالت دیگری نیز به نام حالت ویژوال (visual mode) وجود دارد. از این مود برای انتخاب و ویرایش و انجام عملیات‌های مختلف بر روی بخش‌های بزرگ‌تری از متن استفاده می‌شود</p>
+<p>ویژوال مود سه حالت کلی دارد.</p>
+<ul>
+<li>حالت کاراکتری</li>
+<li>حالت خطی</li>
+<li>حالت بلاک</li>
+</ul>
+</div>
+<pre><code>character mode, line mode, and block mode
+</code></pre>
+<br>
+<ul>
+<li><strong><code>v</code></strong> -- انتخاب متن در حالت کاراکتری</li>
+<li><strong><code>V</code></strong> -- انتخاب متن در حالت خطی</li>
+<li><strong><code>Ctrl</code></strong>+<strong><code>v</code></strong> -- انتخاب متن در حالت بلاک</li>
+</ul>
+<p>پس از فعال‌سازی یکی از حالت‌ها، با استفاده از کلید‌های جهت متن را انتخاب کنید.
+<br></p>
+<ul>
+<li><strong><code>o</code></strong> -- حرکت از ابتدای متن انتخاب شده به آخر آن</li>
+<li><strong><code>aw</code></strong> -- انتخاب یک کلمه</li>
+<li><strong><code>ab</code></strong> -- انتخاب یک بلاک کد که در بین پرانتز است</li>
+<li><strong><code>aB</code></strong> -- انتخاب یک بلاک کد که در بین آکولاد است {}</li>
+<li><strong><code>at</code></strong> -- انتخاب یک بلاک کد که در بین تگ است &lt;&gt;</li>
+<li><strong><code>ib</code></strong> -- انتخاب قسمت داخلی یک بلاک کد که بین پرانتز است</li>
+<li><strong><code>iB</code></strong> - انتخاب قسمت داخلی یک بلاک کد که بین آکولاد است {}</li>
+<li><strong><code>it</code></strong> -- انتخاب قسمت داخلی یک بلاک کد که بین یک تگ است &lt;&gt;</li>
+</ul>
+<div dir="rtl">پس از انتخاب متن مورد نظر می‌توانید عملیات‌های مختلف را به وسیله‌ی کلید‌های زیر انجام دهید.</div>
+<ul>
+<li><strong><code>y</code></strong> -- کپی</li>
+<li><strong><code>d</code></strong> -- کات</li>
+<li><strong><code>p</code></strong> -- جایگذازی
+<br></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="srch"><a class="header" href="#srch"> جستجو در متن</a></h1></div>
+<ul>
+<li><strong><code>* \ asterisk</code></strong> -- رفتن به وقوع بعدی از کلمه‌ی زیر نشانگر</li>
+<li><strong><code># \ pound sign</code></strong> -- رفتن به وقوع قبلی از کلمه‌ی زیر نشانگر</li>
+<li><strong><code>/pattern</code></strong> --جستجوی یک الگوی مشخص در فایل</li>
+<li><strong><code>?pattern</code></strong> -- جستجوی یک الگوی مشخص از مکان فعلی تا اول متن</li>
+<li><strong><code>n</code></strong> -- پرش به وقوع بعدی الگوی یافت شده</li>
+<li><strong><code>N</code></strong> -- پرش به وقوع قبلی الگوی یافت شده</li>
+</ul>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="wq"><a class="header" href="#wq"> ذخیره کردن و خروج از فایل</a></h1></div>
+<ul>
+<li><strong><code>:w</code></strong> -- ذخیره کردن</li>
+<li><strong><code>:wq</code></strong> / <strong><code>:x</code></strong> / <strong><code>ZZ</code></strong> -- ذخیر کردن و خروج از ویم</li>
+<li><strong><code>:q</code></strong> -- خروج</li>
+<li><strong><code>:q!</code></strong>/ <strong><code>ZQ</code></strong> -- خروج بدون ذخیره کردن تغییرات</li>
+<li><strong><code>:w new_file_name </code></strong>-- ذخیره کردن تحت نامی جدید و ادامه دادن به ویرایش فایل اصلی</li>
+<li><strong><code>:sav</code></strong> -- ذخیره کردن تحت نامی جدید و ادامه‌ دادن به ویرایش فایل کپی شده</li>
+<li><strong><code>:w !sudo tee %</code></strong> -- ذخیره کردن فایل به‌وسیله‌ی سودو و تی، مناسب وقتی که فایلی را بدون دسترسی سودو باز کرده‌ایم <a href="https://wiki.archlinux.org/title/Tee">tee</a>
+<br></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="multi"><a class="header" href="#multi">  کار کردن با بیش از یک فایل</a></h1></div>
+<ul>
+<li><strong><code>:e file_name </code></strong> -- باز کردن فایل در یک بافر جدید</li>
+<li><strong><code>:bn </code></strong> -- رقتن به بافر بعدی</li>
+<li><strong><code>:bp</code></strong> -- بازگشت به بافر قبلی</li>
+<li><strong><code>:bd </code></strong> -- بستن بافر</li>
+<li><strong><code>:b# </code></strong> -- رفتن به بافر با عدد شناسایی مشخص</li>
+<li><strong><code>:b file_name</code></strong> -- رفتن به بافر با نام مشخص</li>
+<li><strong><code>:ls</code></strong> -- لیست کردن تمام بافر باز ( شناسه‌ی عددی هر بافر کنار نام آن ظاهر خواهد شد)</li>
+</ul>
+<br>
+<ul>
+<li>
+<p><strong><code>:sp file_name </code></strong> -- باز کردن یک فایل در یک اسپلیت افقی</p>
+</li>
+<li>
+<p><strong><code>:vs file_name </code></strong> --باز کردن یک فایل در یک اسپلیت عمودی</p>
+</li>
+<li>
+<p><strong><code>:vert ba </code></strong> -- باز کردن همه‌ی بافر های فعلی در اسپلیت‌های عمودی</p>
+</li>
+<li>
+<p><strong><code>:tab ba </code></strong> -- ویرایش تمام بافر‌ها به‌وسیله تب‌</p>
+</li>
+<li>
+<p><strong><code>gt</code></strong> -- رفتن به تب بعدی</p>
+</li>
+<li>
+<p><strong><code>gT</code></strong> -- رفتن به تب قبلی</p>
+</li>
+<li>
+<p><strong><code>Ctrl+ws</code></strong> -- اسپلیت کردن صفحه به صورت افقی</p>
+</li>
+<li>
+<p><strong><code>Ctrl+wv</code></strong> -- اسپلیت کردن صفحه به صورت عمودی</p>
+</li>
+<li>
+<p><strong><code>Ctrl+ww</code></strong> -- سوییچ کردن بین اسپلیت ها (مشابه alt + tab)</p>
+</li>
+<li>
+<p><strong><code>Ctrl+wq</code></strong> -- بستن اسپلیت ها</p>
+</li>
+<li>
+<p><strong><code>Ctrl+wx</code></strong> -- جابجا کردن اسپلیت ‌ها با یگدیگر</p>
+</li>
+<li>
+<p><strong><code>Ctrl+=</code></strong> -- برابر کردن طول و عرض تمام اسپلیت‌ها</p>
+</li>
+</ul>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="mark"><a class="header" href="#mark">  مارک‌ها و پرش‌ها</a></h1></div>
+<ul>
+<li><strong><code>m[a-z]</code></strong> -- مارک کردن موقعیت فعلی به‌وسیله‌ی حروف الفبا</li>
+<li><strong><code>M[a-z]</code></strong> -- مارک کردن خط فعلی به‌وسیله‌ی خطوط الفبا</li>
+<li><strong><code>`a</code></strong> - پرش به موقعیتی که با حرف آ مارک شده <strong><code>a</code></strong></li>
+<li><strong><code>`.</code></strong> -- پرش به آخرین تغییر در فایل</li>
+<li><strong><code>`0</code></strong> -- پرش به آخرین موقعیت فایل قبل از بسته شدن ویم</li>
+<li><strong><code>``</code></strong> -- پرش به آخرین پرش</li>
+<li><strong><code>:marks</code></strong> -- لیست کردن همه‌ی مارک ها</li>
+<li><strong><code>:jumps</code></strong> -- لیست کردن همه‌ی پرش ‌ها</li>
+<li><strong><code>:changes</code></strong> لیست کردن همه‌ی‌ تغییرات</li>
+<li><strong><code>Ctrl+o</code></strong> -- رفتن به پرش قبلی</li>
+<li><strong><code>Ctrl+i</code></strong> -- رفتن به پرش بعدی</li>
+<li><strong><code>g;</code></strong> -- رفتن به تغییر قبلی در لیست تغییرات</li>
+<li><strong><code>g,</code></strong> -- رفتن به نغییر بعدی در لیست تغییرات</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="macro"><a class="header" href="#macro">  ماکرو</a></h1></div>
+<div dir="rtl">برای دستور ها یا ویرایش های تکرار شونده در ویم میتوان از ماکروها استفاده کرد.
+برای ضبط یک ماکرو ابتدا کلید q و سپس نام رجیستری که می‌خواهیم ماکرو در آن ضبط شود را وارد می‌کنیم، بدین ترتیب می‌توانیم چندین ماکرو بصورت همزمان داشته باشیم. در این مثال از رجیستر a استفاده شده است.
+</div>
+<ul>
+<li><strong><code>qa </code></strong> -- ضبط کردن یک ماکرو <strong><code>a</code></strong></li>
+<li><strong><code>q </code></strong> -- توقف ضبط یک ماکرو</li>
+<li><strong><code>@a </code></strong> -- اجرا کردن ماکرو <strong><code>a</code></strong></li>
+<li><strong><code>@@ </code></strong> -- اجرای دوباره‌ی ماکرو</li>
+</ul>
+<div dir="rtl">برای مثال اگر محتوای زیر را داشته باشیم:</div>
+<pre><code>aaa
+bbb
+ccc
+ddd
+</code></pre>
+<div dir="rtl">و بخواهیم در آخر هر خط یک کاراکتر وارد کنیم، برای مثال  حرف x، می توانیم ماکرو زیر را ضبط کنیم.</div>
+<pre><code>Ax&lt;ESC&gt;j
+
+با در نظر گرفتن کلید ضبط و پایان ضبط ماکرو
+
+qAx&lt;ESC&gt;jq
+</code></pre>
+<div dir="rtl">در اینجا با استفاده از اپراتور A، به آخر خط رفته و وارد مود ورود متن یا همان اینسرت مود می شویم. حرف x را تایپ کرده و با زدن کلید اسکیپ به مود نرمال بر می گردیم و در آخر با زدن کلید j به خط پایین می رویم تا ماکرو بتواند ادامه پیدا کند.
+همان‌طور که پیش‌تر گفتیم، همه‌چیز در ویم شمارش پذیر یا توان پذیر هستند. بنابراین برای اجرای یک ماکرو به توان عدد خاصی، آن عدد را قبل از فراخوانی ماکرو وارد می‌کنیم.
+</div>
+<br>
+<pre><code>10@a 
+ماکروی ضبط شده در رجیستر را به تعداد ده بار اجرا می‌کند
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="colo"><a class="header" href="#colo"> فعال کردن تم‌ها در ویم</a></h1></div>
+<ul>
+<li><strong><code>:colorscheme [colorscheme_name] </code></strong> -- تغییر تم رنگی</li>
+<li><strong><code>:colorscheme [space]+Ctrl+d</code></strong> -- لیست کردن تمام تم های رنگی موجود</li>
+</ul>
+<div dir="rtl"><h5 id="چند-تم-پیشفرض-زیبا"><a class="header" href="#چند-تم-پیشفرض-زیبا">چند تم پیش‌فرض زیبا:</a></h5></div>
+<ul>
+<li>retrobox</li>
+<li>lunaperche</li>
+<li>elflord</li>
+<li>slate</li>
+</ul>
+<div dir="rtl">با استفاده از دستور زیر نیز می‌توان رنگ زمینه پیش‌فرض ویم را به روشن یا تاریک تغییر داد:</div>
+<br>
+<pre><code>:set background=dark
+:set background=light
+</code></pre>
+<div dir="rtl">برای استفاده بهتر  از رنگ ها و همچنین فعال سازی سینتکس، از دستور زیر استفاده می کنیم:</div>
+<br>
+<pre><code>:syntax on
+</code></pre>
+<div dir="rtl">بعدها شیوه ذخیره کردن این تنظیمات در ویم را خواهیم آموخت.</div>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="s"><a class="header" href="#s">دستورات جایگزینی متن </a></h1>
+یکی از قابلیت‌های قدرتمند ویم، دارا بودن یک نوع فرمان SED داخلی است. این فرمان که در ویم معمولاً substitute خوانده می‌شود، ابزار بسیار پیشرفته‌ای برای یافتن و ویرایش متن به وسیله‌ی الگو‌های رجکس است.
+با استفاده از این دستور، کاربر ویم می‌تواند ویرایش‌های عظیم و پیچیده‌ای را روی فایل‌ها اعمال کند. عملیات‌های طولانی و طاقت فرسای اصلاح متنی طولانی با استفاده صحیح از این دستور به آسانی صحبت کردن با بهترین دوستتان می‌شوند.
+<p>برای مثال, یک فایل html با محتوای زیر داریم.</p>
+</div>
+<div align="center">
+<h1 id="quote-of-the-day"><a class="header" href="#quote-of-the-day"> Quote of the day</a></h1>
+<h2 id="shopenhauer"><a class="header" href="#shopenhauer"> Shopenhauer</a></h2>
+<p>"The majority of men... are not capable of thinking, but only of believing, and... are not accessible to reason, but only to authority." <br></p>
+<p>(Arthur Shopenhauer)</p>
+</div>
+<div dir="rtl">
+فرض می‌کنیم که این بخشی از یک مقاله دانشگاهی یا پستی برای یک وبلاگ است. همچنین فرض می‌کنیم که ما نام آرتور شوپنهاور را از اول این فایل اشتباه تایپ کرده‌ایم. به‌جای Sch برای صدای ش در آلمانی از Sh در انگلیسی استفاده کرده‌ایم. حالا ساعت‌ها کار ما بخاطر این اشتباه غیرقابل ارائه است. 
+<p>برای حل این مشکل از یک دستور جایگزینی ساده استفاده می‌کنیم.</p>
+</div>
+<pre><code>:%s/Shopenhauer/Schopenhauer/g
+</code></pre>
+<div dir="rtl">اجازه بدهید دستور را خرد کنیم.</div>
+<br>
+<ul>
+<li>% همیشه اشاره به فایل فعلی در ویم دارد، اینجا یعنی در این فایل بگرد</li>
+<li>s شروع دستور جستجو و جایگزینی همیشه با این حرف است. به معنی substitute</li>
+<li>/الگوی هدف/</li>
+<li>/الگوی مقصد/</li>
+<li>g انجام عملیات برای تمامی مچ‌ها</li>
+</ul>
+<div dir="rtl"><h5 id="نکته"><a class="header" href="#نکته">نکته </a></h5></div>
+<div dir="rtl"><div style="color:yellow;"><strong>در ویم نقطه . اشاره به خط زیر نشانگر دارد</strong></div></div>
+<br>
+<div dir="rtl">سینتکس ساده ی دستورات جایگزینی به شکل زیر است:</div>
+<pre><code>:s/search/replace/flags
+</code></pre>
+<div dir="rtl"><h2 id="sflags"><a class="header" href="#sflags">فلگ های مرسوم برای دستورات جایگزینی</a></h2></div>
+<ul>
+<li><em><code>c</code></em> تایید کردن هر جایگزینی بصورت دستی</li>
+<li><em><code>e</code></em> ساکت کردن ارورها در صورتی که الگو پیدا نشود</li>
+<li><em><code>i</code></em>  نادیده گیری حروف بزرگ و کوچک ignorecase</li>
+<li><em><code>I</code></em>  حساسیت به حروف بزرگ و کوچک</li>
+<li><em><code>g</code></em> انجام جایگزینی در تمام مچ‌ها، در غیر این صورت جایگزینی پس از اولین مچ متوقف می‌شود</li>
+<li><em><code>n</code></em> نمایش تعداد مچ‌ها و عدم جایگزینی</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="larg"><a class="header" href="#larg">آرگومان های خط فرمان</a></h1></div>
+<div dir="rtl">آرگومان های خط فرمان ویم، آپشن هایی هستند که برای تغییر عمل کرد ویم در هنگام باز کردن آن از ترمینال، می توانید مقابل نام دستور ویم قرار دهید. در جدول زیر تعداد زیادی از این آرگومان ها برای شما با توضیحات فارسی قرار داده شده است.</div>
+<br>
+<div dir="rtl">پر کاربردترین این آرگومان  ها از نظر نگارنده در جدول اول و باقی آن ها در جدول دوم آمده اند.</div>
+<hr>
+<div dir="rtl"><h4 id="جدول-اول"><a class="header" href="#جدول-اول">جدول اول</a></h4></div>
+<div class="table-wrapper"><table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>-o</code></td><td>باز کردن تعدادی فایل در اسپلیت های افقی</td></tr>
+<tr><td><code>-O</code></td><td>باز کردن تعدادی فایل در اسپلیت های افقی عمودی</td></tr>
+<tr><td><code>-p</code></td><td>باز کردن تعدادی فایل در تب های مجزا درون ویم</td></tr>
+<tr><td><code>+/{pat}</code></td><td>تعیین جایگاه نشانگر براساس اولین وقوع رجکس</td></tr>
+<tr><td><code>-u {vimrc}</code></td><td>خواندن فایل پیکره بندی غیر از فایل پیش فرض</td></tr>
+<tr><td><code>--clean</code></td><td>باز کردن ویم بدون تنظیمات شخصی - بدون ویم آرسی</td></tr>
+<tr><td><code>--version</code></td><td>چاپ اطلاعات مربوط به ورژن و ویژگی ها</td></tr>
+</tbody></table>
+</div><hr>
+<div dir="rtl"><h4 id="جدول-دوم"><a class="header" href="#جدول-دوم">جدول دوم</a></h4></div>
+<div class="table-wrapper"><table><thead><tr><th>Option</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>vim</code></td><td>باز کردن ویم و یک بافر خالی در حالت نرمال</td></tr>
+<tr><td><code>vim filename</code></td><td>باز کردن ویم با یک فایل مشخص</td></tr>
+<tr><td><code>vim -</code></td><td>stdin خواندن متن از ورودی استاندارد</td></tr>
+<tr><td><code>-n</code> or <code>--normal</code></td><td>باز کردن ویم در حالت نرمال، پیش‌فرض</td></tr>
+<tr><td><code>-i</code> or <code>--insert</code></td><td>باز کردن ویم در مود اینسرت</td></tr>
+<tr><td><code>-R</code> or <code>--readonly</code></td><td>باز کردن فایل در حالت غیرقابل ویرایش</td></tr>
+<tr><td><code>-N</code> or <code>--noplugin</code></td><td>باز کردن ویم بدون لود کردن هیچ پلاگینی</td></tr>
+<tr><td><code>+[num]</code></td><td>تعیین جایگاه نشانگر براساس شماره خط</td></tr>
+<tr><td><code>+{command}</code> or <code>-c {command}</code></td><td>اجرای یک دستور پس از بازکردن فایل</td></tr>
+<tr><td><code>-S {file}</code></td><td>سورس کردن یک فایل ویم اسکریپت</td></tr>
+<tr><td><code>-g</code> or <code>--gui</code></td><td>باز کردن جی ویم یا همان ویم در پنجره گرافیکی</td></tr>
+<tr><td><code>-A</code></td><td>باز کردن ویم در حالت عربی، راست به چپ آینه شده، درصورتی که با گزینه مربوط کامپایل شده باشد</td></tr>
+<tr><td><code>-b</code></td><td>حالت ویرایش فایل‌های باینری</td></tr>
+<tr><td><code>-C</code></td><td>vi حالت هماهنگی با ادیتور</td></tr>
+<tr><td><code>-d</code></td><td>diff باز کردن ویم در حالت دیف , برای مقایسه فایل‌ها</td></tr>
+<tr><td><code>-E</code></td><td>باز کردن ویم در مود ارتقا یافته ی اکس</td></tr>
+<tr><td><code>-F</code></td><td>باز کردن ویم با تنظیمات فارسی، این گزینه دیگر وجود ندارد</td></tr>
+<tr><td><code>-h</code></td><td>نمایش پیام کمکی</td></tr>
+<tr><td><code>-m</code></td><td>غیر فعال کردن امکان ایجاد تغییر</td></tr>
+<tr><td><code>-N</code></td><td>vi  خاموش کردن تطابق با</td></tr>
+<tr><td><code>-R</code></td><td>read only حالت</td></tr>
+<tr><td><code>-r</code></td><td>لیست کردن فایل های سواپ ویم جهت ریکاوری</td></tr>
+<tr><td><code>-x</code></td><td>فعال سازی رمزگذاری فایل</td></tr>
+<tr><td><code>-y</code></td><td>باز کردن ویم در حالت ایزی-ویم / در این حالت ویم نت پد ویندوز را شبیه سازی می کند</td></tr>
+<tr><td><code>-Z</code></td><td>باز کردن ویم در حالت محدود، جلوگیری از اجرای دستورات پوسته و غیره</td></tr>
+<tr><td><code>--</code></td><td>اعلام پایان آرگومان های ویم، پس از این تمام آرگومان ها به عنوان نام فایل خوانده می شوند</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><div dir="rtl">
+   <h1 id="parsi-1"> 
+   کارکردن با نوشتار پارسی در ویم
+   </h1>
+</div>
+<div dir="rtl">
+برخلاف آنچه تصور می‌کنید، ویم قابلیت رندر کردن و تایپ متون فارسی را دارد. با اینکه ویژگی +farsi در نسخه ۷ از ویم حذف شد، اکثر توزیع‌های ویم‌ با ویژگی +arabic کامپایل شده‌اند و در نتیجه قابلیت پردازش متون راست به چپ را نیز دارا می‌باشند.
+<p>طبیعتا شما می‌توانید با تغییر زبان کیبورد خود به هر زبانی که می‌خواهید در ویم تایپ کنید، اما قابلیت استفاده از دستورات ویم را از دست می‌دهید و برای مثال چنانچه از اینسرت مود خارج شوید دیگر با زدن کلید <code>i</code> به آن باز نمی‌گردید.</p>
+<p>راه حل این مسئله استفاده از کیبورد فارسی داخلی ویم است.</p>
+<p>دستور زیر را در مود خط فرمان ویم وارد کنید:</p>
+</div>
+<pre><code>:echo $VIMRUNTIME
+</code></pre>
+<div dir="rtl">
+بسته یه اینکه ویم را چگونه کامپایل کرده‌اید، یا در کدام توزیع آن‌را از مخارن باینری نصب کرده‌اید، مسیر خروجی می‌تواند متفاوت باشد. معمولا مسیر زیر در نتیجه دستور بالا به شما نمایش داده خواهد شد:
+</div>
+<pre><code>/usr/share/vim/vim90/
+</code></pre>
+<div dir="rtl">
+این مسیر ران‌تایم ویم و فایل‌های آن است.
+از طریق شل (پوسته) وارد مسیر بالا شوید:
+</div>
+<pre><code>cd /usr/share/vim/vim90
+</code></pre>
+<div dir="rtl">
+سپس با استفاده از  <code>ls</code> پوشه‌ها و فایل‌های موجود را بررسی کنید‌.
+باید یک پوشه به نام keymaps ببینید. 
+با دستور زیر از وجود فایل کیبورد فارسی برای ویم اطمینان حاصل کنید:
+</div>
+<pre><code>find keymaps -type f -name '*persian*'
+</code></pre>
+ <div dir="rtl">
+این فرایند را می‌توانستیم به صورت زیر نیز خلاصه کنیم:
+</div>
+<pre><code>find /usr/share/vim/vim90 -type f -name '*persian*'
+</code></pre>
+<div dir="rtl">
+چنانچه به هر علتی، فایل persian.vim و persian-iranian_utf-8.vim در مسیر ویم قرار ندارد، از مخزن ویم آن‌‌ها را دانلود کنید و در مسیر مذکور قرار دهید. 
+</div>
+<a href="https://github.com/vim/vim/tree/master/runtime/keymap"> Vim GitHub </a>
+<div dir="rtl">
+حالا می‌توانیم وارد ویم شویم و با دستور زیر زبان ورودی را به فارسی تغییر دهیم.
+</div>
+<pre><code>:set keymap=persian
+</code></pre>
+<div dir="rtl">
+بدین‌ترتیب، تمام مود‌های ویم، و شورتکات‌های ویم در عین فارسی بودن کیبورد به درستی کار می‌کنند.
+<p>برای تغییر کیبورد به انگلیسی از دستور زیر استفاده می‌کنیم:</p>
+</div>
+<pre><code>:set keymap=
+</code></pre>
+<div dir="rtl">
+جهت راحتی بیشتر، می‌توانیم برای این دستور‌ها، شورتکات تعریف کنیم.
+برای مثال:
+</div>
+<pre><code>inoremap &lt;C-f&gt; &lt;C-o&gt;:set keymap=persian&lt;cr&gt;
+inoremap &lt;C-e&gt; &lt;C-o&gt;:set keymap= &lt;cr&gt;
+</code></pre>
+<div dir="rtl">بدین ترتیب با کلید‌های Ctrl+f به پارسی، و با Ctrl+e به انگلیسی می‌رویم.
+اما بهتر است از مپ کردن کلید‌هایی که در ویم کاربرد پیش‌فرضی دارند، مانند دو ترکیب بالا خودداری کنیم و به جای آن از کلید لیدر استفاده کنیم.
+</div>
+<pre><code>inoremap &lt;leader&gt;f &lt;C-o&gt;:set keymap=persian&lt;cr&gt;
+inoremap &lt;leader&gt;e &lt;C-o&gt;:set keymap= &lt;cr&gt;
+</code></pre>
+<div dir="rtl">کلید لیدر، یک مودیفایر مخصوص در ویم است که با ترکیب آن با دیگر کلیدها می‌توانیم مپینگ‌های شخصی‌ بسازیم، بدون اینکه مپینگ‌های داخلی ویم را تغییر داده باشیم. کلید لیدر پیش‌فرض ویم <code>\</code> است.
+اکثر کاربران این کلید لیدر را به اسپیس تغییر می‌دهتد.
+</div>
+<pre><code>let mapleader =" "
+</code></pre>
+<div dir="rtl">بنابراین با زدن space-e و space-f کیبورد را عوض می‌کنیم.
+ این تنظیمات باید در فایل ~/.vimrc قرار بگیرند.
+</div>
+<br>
+<div dir="rtl">
+   <h2 id="parsi-2"> 
+نکاتی درمورد ترمینال
+   </h2>
+اگر به‌صورت مداوم با متون پارسی سروکار دارید، حتما از یک ترمینال مناسب استفاده کنید. ترمینال‌های VTE و ترمینال‌های شناخنه شده، ساپورت مناسبی برای نوشتار راست به چپ دارند.
+لیستی از  ترمینال‌های خوب در پایین آورده شده است.
+</div>
+<ol>
+<li>Xterm</li>
+<li>Xfce4-terminal</li>
+<li>Konsole</li>
+<li>Roxterm</li>
+<li>Blackbox</li>
+<li>Gnome-terminal</li>
+<li>Terminator</li>
+<li>Lxterminal</li>
+<li>Qterminal</li>
+<li>Sakura</li>
+</ol>
+<div dir="rtl">
+   <h2 id="parsi-3"> 
+   فونت‌های مناسب برای هر دو نوشتار پارسی و انگلیسی 
+   </h2>
+   فونت‌های زیر عملکرد‌ مناسبی در هردو نوشتار راست به چپ و چپ به راست دارند.
+   در اکثر مواقع فونت پیش‌فرض monospace سیستم برای بیشتر سناریو ها مناسب است.  با استفاده از دستور زیر می‌توانید ببینید که فونت پیش‌فرض مونو سیستم شما کدام فونت است.
+</div>
+<pre><code>fc-match monospace
+</code></pre>
+<div dir="rtl">
+<p>خروجی این دستور در سیستم نگارنده به شکل زیر است:</p>
+</div>
+<p><code>NotoSansMono-Regular.ttf</code></p>
+<div dir="rtl">
+<p>پکیج <code>noto-fonts</code> در اکثر سیستم‌ها بصورت پیش‌فرض نصب است. چنانچه این پکیج را نصب ندارید یا سیستم شما به فونت دیگری برای مونو فالبک می‌کند (برای مثال فونت روبوتو)، می‌توانید فونت مونو سیستمی را تغییر دهید. برای این کار به دستورالعمل توزیع خود مراجعه کنید.</p>
+</div>
+<div dir="rtl">
+<p>برای مواردی که در tty نیاز به فونت مناسب فارسی دارید، فونت terminus ساپورت مناسبی از گلیف‌های فارسی دارد.</p>
+</div>
+<div dir="rtl"><h2 id="zwnj"><a class="header" href="#zwnj">نیم فاصله </a></h2></div>
+<div dir="rtl">برای نمایش درست نیم فاصله ها در ویم، خصوصا در ترمینال، می بایست دو خط زیر را به ویم آرسی خود اضافه کنیم. اینجا از قابلیت  conceal  ویم برای پنهان کردن و جایگزینی ZWNJ استفاده می‌کنیم.</div>
+<br>
+<pre><code>call matchadd('Conceal', '\%u200c', 10, -1, {'conceal':'|'})
+set conceallevel=2 concealcursor=nv
+</code></pre>
+<div dir="rtl">من اینجا از کاراکتر | برای نشان دادن نیم فاصله استفاده  می کنم.</div>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl">
+   <h1 id="vimrc"> 
+    ذخیره‌سازی تنظیمات در فایل ویم‌آرسی 
+   </h1>
+</div>
+<div dir="rtl">
+<p>برای ذخیره‌سازی تنظیمات ویم از فایل ویم‌آرسی استفاده می‌کنیم. این فایل بصورت پیش‌فرض وجود ندارد مگر آن‌که توزیع شما یا خودتان آن‌را ساخته باشید. در این فایل می‌توانیم تمامی تنظیمات داخلی ویمو تنظیمات پلاگین‌ها را تغییر دهیم، ویم‌اسکریپت‌‌های خودمان را اضافه کنیم و ویم را کاملا از آن خود کنیم.</p>
+<p>در ابتدا آپشن‌های مورد نظر خود را set  می‌کنیم. تعدادی از این آپشن‌ها ضروری و تعداد زیادی از آن‌ها کاملا سلیقه‌ای هستند.</p>
+</div>
+<pre><code>vim ~/.vimrc
+</code></pre>
+<br>
+<div dir="rtl">
+در جدول زیر تعدادی از آپشن‌های ضروی از نظر نگارنده آورده ‌شده‌اند.
+</div>
+<br>
+<div class="table-wrapper"><table><thead><tr><th>option</th><th>Description</th></tr></thead><tbody>
+<tr><td>set shiftwidth=4</td><td>تعداد فاصله در هر سطح از ایندت</td></tr>
+<tr><td>set tabstop=4</td><td>تغداد فاصله در هر تب</td></tr>
+<tr><td>set noswapfile</td><td>خاموش کردن فایل های سواپ که برای بازیابی اطلاعات استفاده می شوند</td></tr>
+<tr><td>set autoindent</td><td>ایندنت خودکار</td></tr>
+<tr><td>set ignorecase</td><td>عدم توجه به بزرگی و کوچکی حروف هنگام جستجو</td></tr>
+<tr><td>set incsearch</td><td>هایلاییت الگوی جستجو همزمان با تایپ آن</td></tr>
+<tr><td>set smartcase</td><td>عملکرد هوشمند در رابطه با حروف بزرگ و کوچک</td></tr>
+<tr><td>set relativenumber</td><td>شماره گذاری خطوط به صورت نسبی / به نسبت خط زیر نشانگر</td></tr>
+<tr><td>set number</td><td>شماره گذاری عادی</td></tr>
+<tr><td>set hlsearch</td><td>هایلایت کردن الگوی جستجو</td></tr>
+<tr><td>set autowriteall</td><td>ذخیره ی فایل به صورت خودکار</td></tr>
+<tr><td>set laststatus=2</td><td>نمایش نوار اطلاعات</td></tr>
+<tr><td>set noshowmode</td><td>عدم نمایش تغییر مودها</td></tr>
+<tr><td>set autochdir</td><td>تغییر خودکار مسیر پوسته به مکان فایل باز شده در ویم</td></tr>
+</tbody></table>
+</div><div dir="rtl">برای اطلاعات بیشتر فایل کمکی زیر را مطالعه کنید.</div>
+<p><code>:h options</code ></p>
+<div dir="rtl">دو گزینه‌ی زیر از مهم‌ترین تنظیماتی هستند که باید در ویم انجام دهیم. این دو گزینه باعث هایلایت شدن کد بر اساس سینتکس و اینجام ایندنتیشن بر اساس نوع فایل می‌شوند.</div>
+<pre><code>syntax on
+filetype plugin indent on
+</code></pre>
+<div dir="rtl">بنابراین یک ویم‌آرسی مختصر و مفید به شکل زیر خواهد بود:</div>
+<pre><code>syntax on
+filetype plugin indent on
+
+set shiftwidth=4
+set tabstop=4
+set noswapfile
+set autoindent
+set ignorecase
+set incsearch
+set smartcase
+set relativenumber
+set number
+set hlsearch
+set autowriteall
+set laststatus=2
+</code></pre>
+<div dir="rtl">طبعا گزینه های بی‌شماری برای تنظیمات و شخصی‌سازی ویم وجود دارند. برخی از آن‌ها شامل: چشمک زدن نشانگر، رفتار فولد‌ها،  چک‌کردن املا،  انکودینگ و بسیاری دیگر می‌شوند. توضیح همه‌ی آن‌ها از حوصله‌ی این فصل خارج است، بنابراین گزینه‌های دیگر در فصل‌های مربوط به خودشان مطرح خواهند شد.</div>
+<div style="break-before: page; page-break-before: always;"></div><div dir="rtl">
+   <h1> 
+   نصب پلاگین با استفاده از ویم‌پلاگ
+   </h1>
+</div>
+<div dir="rtl">
+راحت‌ترین راه نصب پلاگین در ویم، استفاده از یک پلاگین منیجر مانند ویم‌پلاگ است. 
+<p>ویم از نسخه ۸ به بعد دارای سیستم مدیریت پلاگین است، اما این روش خیلی مناسب کاربران تازه کار نیست.</p>
+<p>در روش داخلی ویم، پلاگین‌ها باید در ساختار مشخصی از پوشه‌ها و به ترتیب خاصی قرار بگیرند و وظیفه آپدیت نگه‌داشتن آن‌ها نیز با خود کاربر است. پلاگین‌ها بصورت مخازن گیت کلون شده و به کلی با استفاده از دستورات گیت مدیریت می‌شوند.</p>
+<p>این روش برای کسانی که چند پلاگین کوچک نیاز دارند روش مناسب و قابل مدیریتی است. اما برای کسانی که می‌خواهند با راحتی بیشتری پلاگین‌ها را نصب، غیرفعال، آپدیت یا پاک کنند، ویم‌پلاگ گزینه‌ی بسیار بهتری است.</p>
+<p>شایان ذکر است که ویم دارای هیچگونه پلاگین یا قابلیتی برای سرچ کردن پلاگین‌ها از داخل خود ویم نیست و هیچ‌ برنامه‌ای جهت ساخت این‌چنین چیزی وجود ندارد.</p>
+<p>برای نصب ویم‌پلاگ، به مخزن آن در گیت‌هاب رفته و دستور curl مربوط به سیستم خود را انتخاب می‌کنیم.</p>
+<p>برای نصب ویم پلاگ در سیستم‌های یونیکس و لینوکس‌، دستور کرل زیر را اجرا می‌کنیم:</p>
+</div>
+<code>
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</code> 
+<div dir="rtl">
+دقت کنید که دستور مناسب سیستم عامل خود را انتخاب کنید. همچنین دقت کنید که دستور ویم با نئوویم فرق دارد.
+( در این سایت به نئوویم پرداخته نمی‌شود. )
+<p>پس از اجرای دستور بالا، کافی‌ست که آدرس پلاگین‌های خود را بین دو عبارت</p>
+</div>
+<pre><code>call plug#begin()
+</code></pre>
+<div dir="rtl">
+   و  
+</div>
+<pre><code>call plug#end()
+</code></pre>
+<div dir="rtl">
+قرار دهید.  هر پلاگین موجهی که درون این دو عبارت باشند نصب و هنگام باز شدن ویم لود می‌شوند. برای موقتا غیرفعال کردن یک پلاگین کافی‌ست آن‌را در ویم‌آرسی کامنت کنیم و یرای پاک کردن آن کافی‌ست خط مربوط به آن را پاک کنیم و دستور پاک‌سازی‌ پلاگین‌ها را اجرا کنیم.
+<p>آدرس پلاگین‌ها می‌توانند آدرس http مخزن گیت یا آدرس کوتاه شده باشند. تقریبا همه‌ی پلاگین‌های ویم از ویم‌پلاگ پشتیبانی می‌کنند. اکثر پلاگین‌ها در دستورات نصب خود آدرس کوتاه شده‌ی پلاگین را برای استفاده با ویم‌پلاگ قرار داده‌اند.</p>
+<p>برای مثال چند پلاگین مفید و کاربردی نصب می‌کنیم.</p>
+</div>
+<pre><code>call plug#begin()
+
+Plug 'SirVer/ultisnips' 
+Plug 'honza/vim-snippets'
+Plug 'https://github.com/wolandark/browser-sync.git', { 'do': 'npm install browser-sync' }
+
+call plug#end()
+</code></pre>
+<div dir="rtl">
+در کد بالا که جایی در ویم‌آرسی خود قرار می‌دهیم، نمونه‌ی استفاده از آدرس کامل مخرن و آدرس کوتاه شده قابل مشاهده است.
+<p>سینتکس دستورات ساده‌ی ویم‌پلاگ به شکل زیر است.
+<code>
+Plug 'address in single quotes'
+&lt;\code&gt;</p>
+<p>ویم‌پلاگ قابلیت‌های زیادی دارد که بهتر است برای یادگیری آن‌ها به گیت‌هاب پروژه مراجعه کنید.</p>
+<p>دستورات ضروری ویم‌پلاگ اینجا مطرح خواهند شد.</p>
+</div>
+<div dir="rtl">
+پس از قراردادن آدرس پلاگین‌ها در ویم‌آرسی، فایل را ذخیره و سورس می‌کنیم  
+</div>
+<code>
+:w
+<br>
+:source %
+<br>
+(یا خارج و وارد می‌شویم)
+</code>
+<div dir="rtl">
+سپس با دستور PlugInstall پلاگین‌های خود را نصب می‌کنیم.
+</div> <br>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Descriptionb</th></tr></thead><tbody>
+<tr><td>:PlugInstall</td><td>نصب پلاگین‌ها</td></tr>
+<tr><td>:PlugUpdate</td><td>آپدیت پلاگین‌ها</td></tr>
+<tr><td>:PlugUpgrade</td><td>آپگرید ویم‌پلاگ</td></tr>
+<tr><td>:PlugClean</td><td>پاک کردن پلاگین‌ها</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="چند-پلاگین-مفید-برای-ویم"><a class="header" href="#چند-پلاگین-مفید-برای-ویم"> چند پلاگین مفید برای ویم </a></h1>
+لیستی از پلاگین‌های مفید و کارآمد در زیر آورده شده است. بر اساس نیاز خود و با در نظرگیری کارکرد و تطابق پلاگین‌ها با همدیگر  از بین آن‌ها انتخاب کنید. 
+لیست کامل‌تری از پلاگین‌های ویم در سایت 
+<a href="https://vimawesome.com/">vimawesome</a> 
+قرار دارد.
+<br>
+<br>
+</div>
+<div>
+    <ul>
+        <li>
+            <a href="https://github.com/tpope/vim-surround">vim-surround</a>
+            <p dir="rtl">پلاگینی برای محاصره کردن توکن ها با  الگو های دیگر</p>
+            <code>Plug 'tpope/vim-surround'</code>
+        </li>
+        <li>
+            <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a>
+            <p dir="rtl">اکستنشن Nodejs برای ویم - لود کردن اکستنشن مانند وی اس کد </p>
+            <code> curl -sL install-node.vercel.app/lts | bash
+            <br>
+            Plug 'neoclide/coc.nvim', {'branch': 'release'}</code>
+        </li>
+        <li>
+            <a href="https://github.com/ap/vim-css-color">vim-css-color</a>
+            <br>
+            <p dir="rtl">هایلات کردن رنگ‌های CSS در ویم</p>
+            <code>Plug 'ap/vim-css-color'</code>
+        </li>
+        <li>
+            <a href="https://github.com/itchyny/lightline.vim">lightline.vim</a>
+            <br>
+            <p dir="rtl">استاتوس لاین زیبا و کارآمد</p>
+            <code>Plug 'itchyny/lightline.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/junegunn/fzf.vim">fzf.vim</a>
+            <br>
+            <p dir="rtl">فازی فایندر </p>
+            <code>Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }<br>
+Plug 'junegunn/fzf.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/tpope/vim-repeat">vim-repeat</a>
+            <br>
+            <p dir="rtl">تکرار همه‌چیز به آسانی </p>
+            <code>Plug 'tpope/vim-repeat'</code>
+        </li>
+        <li>
+            <a href="https://vimawesome.com/plugin/tagbar">tagbar</a>
+            <br>
+            <p dir="rtl">پلاگین مرور کردن تگ‌ها</p>
+            <code>Plug 'majutsushi/tagbar'</code>
+        </li>
+        <li>
+            <a href="https://github.com/dense-analysis/ale">ale</a>
+            <br>
+            <p dir="rtl">پلاگین LSP برای ویم</p>
+            <code>Plug 'w0rp/ale'</code>
+        </li>
+        <li>
+            <a href="https://github.com/godlygeek/tabular">tabular</a>
+            <br>
+            <p dir="rtl">منظم‌سازی متن بر اساس الگو یا کاراکتر، مناسب جدول و غیره ...</p>
+            <code>Plug 'godlygeek/tabular'</code>
+        </li>
+        <li>
+            <a href="https://github.com/sirver/ultisnips">ultisnips</a>
+            <br>
+            <p dir="rtl">موتور مدیریت اسنیپت‌ها برای ویم</p>
+            <code>Plug 'sirver/ultisnips'</code>
+        </li>
+        <li>
+            <a href="https://github.com/honza/vim-snippets">vim-snippets</a>
+            <br>
+            <p dir="rtl">اسنیپت‌های ه هونزا برای استفاده با ultisnips</p>
+            <code>Plug 'honza/vim-snippets'</code>
+        </li>
+        <li>
+            <a href="https://github.com/rstacruz/sparkup">sparkup</a>
+            <br>
+            <p dir="rtl">خلاصه‌نویسی HTML مانند Emmet</p>
+            <code>Plug 'rstacruz/sparkup'</code>
+        </li>
+        <li>
+            <a href="https://github.com/chriskempson/base16-vim">base16-vim</a>
+            <br>
+            <p dir="rtl">صدها تم رنگی باکیفیت بر اساس پالت بیس۱۶</p>
+            <code>Plug 'chriskempson/base16-vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlp.vim</a>
+            <br>
+            <p dir="rtl">یک فازی فایندر دیگر برای ویم</p>
+            <code>Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'</code>
+        </li>
+        <li>
+            <a href="https://github.com/rking/ag.vim">ag.vim</a>
+            <br>
+            <p dir="rtl">ابزار فوق‌العاده‌ی ag برای ویم </p>
+            <code>Plug 'rking/ag.vim'</code>
+        </li>
+        <li>
+            <a href="https://github.com/sheerun/vim-polyglot">پکیج زبان برای ویم</a>
+            <br>
+            <p dir="rtl"></p>
+            <code>Plug 'sheerun/vim-polyglot'</code>
+        </li>
+        <li>
+            <a href="https://github.com/tpope/vim-eunuch">vim-eunuch</a>
+            <br>
+            <p dir="rtl">دستورات پوسته با راحتی بیشتر از داخل ویم</p>
+            <code>Plug 'tpope/vim-eunuch'</code>
+        </li>
+        <li>
+            <a href="https://github.com/mg979/vim-visual-multi">vim-visual-multi</a>
+            <br>
+            <p dir="rtl">چندین نشانگر برای ویم مشابه سابلایم</p>
+            <code>Plug 'mg979/vim-visual-multi', {'branch': 'master'}</code>
+        </li>
+        <li>
+            <a href="https://github.com/mhinz/vim-startify">vim-startify</a>
+            <br>
+            <p dir="rtl">داشبرد شروع کار برای ویم</p>
+            <code>Plug 'mhinz/vim-startify'</code>
+        </li>
+        <li>
+            <a href="https://github.com/junegunn/goyo.vim">goyo.vim</a>
+            <br>
+            <p dir="rtl">وسط‌چین کردن متن در ویم و نگارش بدون حواس‌پرتی</p>
+            <code>Plug 'junegunn/goyo.vim'</code>
+        </li>
+    </ul>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><div id="update" align="center" dir="rtl" style="color:orange;">
+آخرین آپدیت:
+<p>۱ مهر ۱۴۰۱</p>
+<p>Sha Meh 01 23:31:46 +0330 1402</p>
+</div>
+<hr>
+<p>💡 <a href="./todo.html">To Do</a></p>
+<hr>
+<footer>
+       <div dir="rtl">
+              <p> مطالب این سایت بصورت مداوم به‌روز‌رسانی می‌شوند.  برای دنبال کردن مطالب این سایت را بوکمارک کنید.</p>
+              <p>جهت کمک به این پروژه و اضافه کردن مطالب و نکات خود در باره ویم، فایل <a href="https://github.com/wolandark/vim-cheatsheet-farsi/blob/master/RAHNAMA.md">راهنمای</a>
+ داخل مخزن را ببینید.</p>
+              <p>جهت حمایت مالی از پروژه، در صورتی که در ایران هستید، روی دکمه‌ی <a href="https://www.coffeete.ir/wolandark">برام قهوه بخر</a>
+ کلیک کنید.</p>
+              <p>جهت ارتباط با نگارنده از طریق تلگرام یا ایمیل اقدام کنید.</p>
+              <p>این سایت از یک اسکریپت web analytics کاملا اوپن سورس، ضمن احترام به حریم خصوصی کاربر استفاده می‌کند.</p>
+       </div>
+</footer>
+<h1 id="contact-me"><a class="header" href="#contact-me">Contact me</a></h1>
+<p><a href="https://t.me/wolandarkside"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&amp;logo=telegram&amp;logoColor=white" alt="Telegram" /></a>
+<a href="mailto:contact-woland@proton.me"><img src="https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&amp;logo=protonmail&amp;logoColor=white" alt="Protonmail" /></a></p>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapters-to-write"><a class="header" href="#chapters-to-write">Chapters to write</a></h1>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+vim plugins - default and vimplug way
+<ul>
+<li>vimplug covered - pack/start briefly covered</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox" checked=""/>
+list of useful plugins</li>
+<li><input disabled="" type="checkbox"/>
+spell check</li>
+<li><input disabled="" type="checkbox"/>
+custom mappings</li>
+<li><input disabled="" type="checkbox"/>
+NETRW</li>
+<li><input disabled="" type="checkbox"/>
+Compiling Vim</li>
+<li><input disabled="" type="checkbox"/>
+tcl (maybe)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
