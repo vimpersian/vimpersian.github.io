@@ -1,15 +1,10 @@
 <div id="update" align="center" dir="rtl" style="color:orange;">
 آخرین آپدیت:
 
-۱ مهر ۱۴۰۱
+۲۱ بهمن ۱۴۰۲
 
-Sha Meh 01 23:31:46 +0330 1402
-
+Sha Bah 21 18:24:03 +0330 1402
 </div>
-<hr>
-
-💡 [To Do](./todo.md)
-
 <hr>
 
 <footer>
