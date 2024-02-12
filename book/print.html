@@ -520,7 +520,64 @@ qAx&lt;ESC&gt;jq
 <br>
 <pre><code>:syntax on
 </code></pre>
-<div dir="rtl">بعدها شیوه ذخیره کردن این تنظیمات در ویم را خواهیم آموخت.</div>
+<div dir="rtl">برای یادگیری ذخیره‌سازی تنظیمات ویم، به فصل ۱۶ مراجعه کنید.
+<br>
+همچنین برای دیدن تمام تم‌های رنگی ویم به سایت زیر مراجعه کنید:
+</div>
+<p>🔗 <a href="https://tilde.club/~woland/vim-colorschemes/">Vim Colorschemes</a></p>
+<div dir="rtl">برای درست دیده شدن رنگ ها در ترمینال، لازم است تا تنظیماتی را انجام دهید.
+<br> 
+<br> 
+ابتدا متغیر زیر را در فایل بش آر سی خود قرار دهید:
+</div>
+<pre><code class="language-sh">export TERM=xterm-256color
+</code></pre>
+<br> 
+<div dir="rtl">سپس در تنظیمات ویم‌آرسی خود، تم ویم را به شکل زیر معین کنید:</div>
+<pre><code class="language-vim">set background=dark
+" Inspect $TERM instead of t_Co
+if &amp;term =~ '256color'
+	" Enable true (24-bit) colors instead of (8-bit) 256 colors.
+	if has('termguicolors')
+		let &amp;t_8f = "\&lt;Esc&gt;[38;2;%lu;%lu;%lum"
+		let &amp;t_8b = "\&lt;Esc&gt;[48;2;%lu;%lu;%lum"
+		set termguicolors
+		set mouse=a
+		colorscheme catppuccin_mocha
+	endif
+endif
+
+" Settings for GVim
+if has('gui_running')
+	set mouse=a
+	set guicursor+=a:blinkon0
+	set guifont=Fira\ Code\ 12
+	colorscheme catppuccin_mocha
+endif
+</code></pre>
+<div dir="rtl">در بلاک کد بالا، نام تم مورد نظر شما روبه‌روی عبارت <code>colorscheme</code> قرار خواهد گرفت.
+<br> 
+همچنین دقت کنید که اگر از تم روشن استفاده می‌کنید، مقدار خط اول را از dark به light تغییر دهید.
+<br> 
+بلاک دوم مختص تنظیمات GVim است. در این بلاک فونت Fira Code نیز برای GVim معین شده است.
+</div>
+<br>
+<div dir="rtl"><h1 id="تصاویر"><a class="header" href="#تصاویر">تصاویر</a></h1>
+<h3 id="تم-زیبای-catppuccin_mocha-در-xterm"><a class="header" href="#تم-زیبای-catppuccin_mocha-در-xterm"> تم زیبای catppuccin_mocha در xterm</a></h3></div>
+<p><img src="./media/xterm.png" alt="image" /></p>
+<div dir="rtl"><h3 id="تم-زیبای-catppuccin_mocha-در-kde-konsole"><a class="header" href="#تم-زیبای-catppuccin_mocha-در-kde-konsole"> تم زیبای catppuccin_mocha در KDE Konsole</a></h3></div>
+<p><img src="./media/konsole.png" alt="image" /></p>
+<div dir="rtl"><h3 id="تم-زیبای-catppuccin_mocha-در-gvim"><a class="header" href="#تم-زیبای-catppuccin_mocha-در-gvim"> تم زیبای catppuccin_mocha در GVim</a></h3></div>
+<p><img src="./media/gvim.png" alt="image" /></p>
+<div style="color:yellow;" dir="rtl">همان‌طور که مشاهده می‌کنید، با استفاده از تنظیمات درست و ترمینالی توانمند، تفاوت رنگی بین ترمینال و محیط گرافیکی مشاهده نمی‌شود.
+</div>
+<div dir="rtl"><h3 id="تم-mitra-ساختهی-نگارنده-براساس-پالت-رنگ-ایرانی-در-ترمینال-xfce"><a class="header" href="#تم-mitra-ساختهی-نگارنده-براساس-پالت-رنگ-ایرانی-در-ترمینال-xfce">تم Mitra ساخته‌ی نگارنده، براساس پالت رنگ ایرانی در ترمینال XFCE</a></h3></div>
+<p><img src="./media/xfce.png" alt="image" /></p>
+<p>🔗 <a href="https://github.com/wolandark/Mitra-Vim">Mitra</a></p>
+<div dir="rtl"><h3 id="تم-روشن-gruvbox-light"><a class="header" href="#تم-روشن-gruvbox-light">تم روشن Gruvbox Light</a></h3></div>
+<p><img src="./media/gruvbox.png" alt="image" /></p>
+<div dir="rtl"><h3 id="تم-fahrenheit"><a class="header" href="#تم-fahrenheit">تم Fahrenheit</a></h3></div>
+<p><img src="./media/fahrenheit.png" alt="image" /></p>
 <div style="break-before: page; page-break-before: always;"></div><div dir="rtl"><h1 id="s"><a class="header" href="#s">دستورات جایگزینی متن </a></h1>
 یکی از قابلیت‌های قدرتمند ویم، دارا بودن یک نوع فرمان SED داخلی است. این فرمان که در ویم معمولاً substitute خوانده می‌شود، ابزار بسیار پیشرفته‌ای برای یافتن و ویرایش متن به وسیله‌ی الگو‌های رجکس است.
 با استفاده از این دستور، کاربر ویم می‌تواند ویرایش‌های عظیم و پیچیده‌ای را روی فایل‌ها اعمال کند. عملیات‌های طولانی و طاقت فرسای اصلاح متنی طولانی با استفاده صحیح از این دستور به آسانی صحبت کردن با بهترین دوستتان می‌شوند.
@@ -1090,6 +1147,22 @@ tcl (maybe)</li>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
