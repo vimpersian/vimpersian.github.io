@@ -4,7 +4,7 @@
     - vimplug covered - pack/start briefly covered 
 - [x] list of useful plugins
 - [x] spell check
-- [ ] cursor shapes
+- [x] cursor shapes
 - [ ] custom mappings 
 - [ ] NETRW
 - [ ] Compiling Vim

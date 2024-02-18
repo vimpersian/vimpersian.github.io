@@ -16,6 +16,7 @@
 - [ماکرو](./13-macros.md)
 - [فعال کردن تم ها در ویم](./14-colorschemes.md)
 - [فونت](./22-fonts.md)
+- [شکل نشانگر](./24-cursor-shape.md)
 - [دستورات جایگزینی متن](./15-substitiute.md)
 - [آرگومان های خط فرمان](./16-Commandline-Arguments.md)
 - [کارکردن با نوشتار پارسی در ویم](./17-persian.md)
